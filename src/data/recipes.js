@@ -11,3 +11,15 @@ export const recipes = [
     rating: 4.9,
     image: "/images/tuscan_salmon.png",
     tags: ["Gluten-Free", "Low-Carb", "Keto"],
+    ingredients: [
+      { name: "salmon fillets", quantity: 2, unit: "pieces" },
+      { name: "olive oil", quantity: 1, unit: "tbsp" },
+      { name: "garlic", quantity: 4, unit: "cloves" },
+      { name: "cherry tomatoes", quantity: 1, unit: "cup" },
+      { name: "baby spinach", quantity: 2, unit: "cups" },
+      { name: "heavy cream", quantity: 0.75, unit: "cup" },
+      { name: "parmesan cheese", quantity: 0.5, unit: "cup" },
+      { name: "chicken broth", quantity: 0.25, unit: "cup" },
+      { name: "salt", quantity: 0.5, unit: "tsp" },
+      { name: "black pepper", quantity: 0.25, unit: "tsp" }
+    ],
