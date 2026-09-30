@@ -20,3 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
   initFilters(filtersContainer);
   const detailController = initRecipeDetail(recipeDetailModal);
   const creatorController = initRecipeCreator(recipeCreatorModal);
+
+    // 2. Wire up Creator Modal triggers
+  const addCustomBtn = document.getElementById('add-custom-btn');
+  addCustomBtn.addEventListener('click', () => {
+    creatorController.openCreator();
+  });
+
+  // 3. Setup Featured Recipe (Tuscan Salmon) in Hero Section
+  const featuredRecipe = recipes.find(r => r.id === 'tuscan-salmon');
+  if (featuredRecipe) {
+    const heroTitle = document.getElementById('hero-title');
+    const heroDesc = document.getElementById('hero-desc');
+    const heroTime = document.getElementById('hero-time');
+    const heroDifficulty = document.getElementById('hero-difficulty');
+    const heroRating = document.getElementById('hero-rating');
+    const heroViewBtn = document.getElementById('hero-view-btn');
