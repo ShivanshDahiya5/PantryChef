@@ -47,3 +47,26 @@ document.addEventListener('DOMContentLoaded', () => {
       detailController.openRecipe(featuredRecipe);
     });
   }
+
+  // 4. Reactive Recipe Grid Rendering
+  store.subscribe((state) => {
+    // Empty the recipe grid
+    recipesGrid.innerHTML = '';
+
+    // Fetch matching filtered & sorted recipes
+    const filteredRecipes = store.getFilteredRecipes();
+
+    if (filteredRecipes.length === 0) {
+      // Show empty state UI
+      recipesGrid.innerHTML = `
+        <div class="recipes-empty">
+          <div class="recipes-empty-icon">🍽️</div>
+          <h3 class="recipes-empty-title">No Recipes Match Your Filters</h3>
+          <p class="recipes-empty-desc">
+            We couldn't find any recipes that match your current pantry ingredients, search text, or dietary choices. 
+            Try adding more ingredients, changing your matching engine mode, or resetting your filter tags.
+          </p>
+        </div>
+      `;
+      return;
+    }
