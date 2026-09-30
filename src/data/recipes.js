@@ -32,3 +32,26 @@ export const recipes = [
       "Return the salmon fillets to the skillet, spooning the rich cream sauce over them. Simmer for 2 minutes until heated through and serve hot."
     ]
   },
+  {
+    id: "avocado-toast",
+    name: "Sourdough Avocado Toast with Poached Egg",
+    description: "Crispy artisanal sourdough bread topped with creamy seasoned avocado, ripe cherry tomatoes, and a perfectly runny poached egg, garnished with microgreens and chili flakes.",
+    category: "Breakfast",
+    prepTime: 5,
+    cookTime: 10,
+    servings: 1,
+    difficulty: "Easy",
+    rating: 4.7,
+    image: "/images/avocado_toast.png",
+    tags: ["Vegetarian", "Dairy-Free"],
+    ingredients: [
+      { name: "sourdough bread", quantity: 1, unit: "slice" },
+      { name: "ripe avocado", quantity: 1, unit: "whole" },
+      { name: "egg", quantity: 1, unit: "whole" },
+      { name: "lemon juice", quantity: 1, unit: "tsp" },
+      { name: "cherry tomatoes", quantity: 4, unit: "pieces" },
+      { name: "red pepper flakes", quantity: 0.25, unit: "tsp" },
+      { name: "salt", quantity: 0.25, unit: "tsp" },
+      { name: "black pepper", quantity: 0.25, unit: "tsp" },
+      { name: "microgreens", quantity: 1, unit: "pinch", optional: true }
+    ],
