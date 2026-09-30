@@ -23,3 +23,12 @@ export const recipes = [
       { name: "salt", quantity: 0.5, unit: "tsp" },
       { name: "black pepper", quantity: 0.25, unit: "tsp" }
     ],
+    instructions: [
+      "Season salmon fillets on both sides with salt and black pepper.",
+      "Heat olive oil in a large skillet over medium-high heat. Sear salmon for 5 minutes on each side, or until golden and cooked to your liking. Remove from skillet and set aside.",
+      "In the same skillet, add minced garlic and saute for 1 minute until fragrant. Add cherry tomatoes and cook until they start to burst.",
+      "Pour in the chicken broth and heavy cream, bringing to a simmer. Reduce heat to low and stir in the parmesan cheese until the sauce thickens slightly.",
+      "Add the baby spinach and let it wilt in the warm cream sauce.",
+      "Return the salmon fillets to the skillet, spooning the rich cream sauce over them. Simmer for 2 minutes until heated through and serve hot."
+    ]
+  },
