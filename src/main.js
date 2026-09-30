@@ -36,3 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroDifficulty = document.getElementById('hero-difficulty');
     const heroRating = document.getElementById('hero-rating');
     const heroViewBtn = document.getElementById('hero-view-btn');
+
+    heroTitle.textContent = featuredRecipe.name;
+    heroDesc.textContent = featuredRecipe.description;
+    heroTime.textContent = `${featuredRecipe.prepTime + featuredRecipe.cookTime} mins`;
+    heroDifficulty.textContent = featuredRecipe.difficulty;
+    heroRating.textContent = featuredRecipe.rating.toFixed(1);
+
+    heroViewBtn.addEventListener('click', () => {
+      detailController.openRecipe(featuredRecipe);
+    });
+  }
