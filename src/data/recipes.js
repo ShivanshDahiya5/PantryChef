@@ -206,3 +206,14 @@ export const recipes = [
     rating: 4.7,
     image: "/images/banana_pancakes.png",
     tags: ["Vegetarian", "Gluten-Free", "Dairy-Free"],
+    ingredients: [
+      { name: "ripe banana", quantity: 2, unit: "whole" },
+      { name: "eggs", quantity: 2, unit: "whole" },
+      { name: "oat flour", quantity: 1, unit: "cup" },
+      { name: "baking powder", quantity: 1, unit: "tsp" },
+      { name: "cinnamon", quantity: 0.5, unit: "tsp" },
+      { name: "almond milk", quantity: 0.25, unit: "cup" },
+      { name: "vanilla extract", quantity: 1, unit: "tsp" },
+      { name: "maple syrup", quantity: 2, unit: "tbsp", optional: true },
+      { name: "fresh berries", quantity: 0.5, unit: "cup", optional: true }
+    ],
