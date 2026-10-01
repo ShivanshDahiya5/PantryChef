@@ -151,3 +151,13 @@ export const recipes = [
       { name: "salt", quantity: 0.125, unit: "tsp" },
       { name: "cocoa powder", quantity: 1, unit: "tbsp", optional: true }
     ],
+    instructions: [
+      "Preheat your oven to 425°F (218°C). Grease two ramekins with butter and dust the insides lightly with cocoa powder.",
+      "Melt the dark chocolate and butter together in a heatproof bowl over a pot of simmering water (or in the microwave in 20-second bursts), stirring until completely smooth. Let cool slightly.",
+      "In a separate bowl, whisk the eggs, sugar, vanilla extract, and salt until pale and slightly frothy.",
+      "Gently fold the melted chocolate mixture and the flour into the whipped eggs until just combined. Do not overmix.",
+      "Divide the batter evenly between the prepared ramekins.",
+      "Bake for 10-12 minutes. The edges should be firm and set, but the centers should still be slightly jiggly.",
+      "Let cool for 2 minutes, then place a plate inverted over the ramekin and carefully flip both over. Let sit for 10 seconds, then lift the ramekin. Garnish with powdered sugar or berries and serve warm."
+    ]
+  },
