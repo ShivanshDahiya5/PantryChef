@@ -217,3 +217,11 @@ export const recipes = [
       { name: "maple syrup", quantity: 2, unit: "tbsp", optional: true },
       { name: "fresh berries", quantity: 0.5, unit: "cup", optional: true }
     ],
+    instructions: [
+      "In a blender, combine the bananas, eggs, oat flour, baking powder, cinnamon, almond milk, and vanilla extract. Blend on high until smooth.",
+      "Let the batter rest for 2 minutes to thicken slightly.",
+      "Heat a non-stick skillet or griddle over medium heat and lightly grease with a tiny bit of coconut oil or cooking spray.",
+      "Pour 1/4 cup portions of batter onto the hot skillet. Cook until bubbles form on the surface (about 2-3 minutes), then flip and cook for another 1-2 minutes until golden brown.",
+      "Stack the pancakes on a plate and serve topped with fresh berries, banana slices, and a drizzle of real maple syrup."
+    ]
+  },
