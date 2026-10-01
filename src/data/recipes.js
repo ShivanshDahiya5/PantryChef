@@ -194,3 +194,15 @@ export const recipes = [
       "Gently crumble the feta cheese over the top and stir lightly to combine. Let chill for 10 minutes in the fridge before serving to let flavors meld."
     ]
   },
+  {
+    id: "banana-pancakes",
+    name: "Fluffy Oatmeal Banana Pancakes",
+    description: "Naturally sweet and healthy pancakes made with oats, ripe bananas, and eggs. Gluten-free, dairy-free, and perfect for a cozy weekend morning.",
+    category: "Breakfast",
+    prepTime: 10,
+    cookTime: 10,
+    servings: 2,
+    difficulty: "Easy",
+    rating: 4.7,
+    image: "/images/banana_pancakes.png",
+    tags: ["Vegetarian", "Gluten-Free", "Dairy-Free"],
