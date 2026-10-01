@@ -99,3 +99,15 @@ export const recipes = [
       "Garnish with chopped green onions and toasted sesame seeds, then serve hot over rice or noodles."
     ]
   },
+  {
+    id: "margherita-pizza",
+    name: "Neapolitan Margherita Pizza",
+    description: "A classic Italian pizza with a bubbly, thin crust, rich tomato sauce, fresh mozzarella cheese, and fragrant sweet basil leaves, drizzled with premium extra virgin olive oil.",
+    category: "Dinner",
+    prepTime: 15,
+    cookTime: 10,
+    servings: 2,
+    difficulty: "Medium",
+    rating: 4.8,
+    image: "/images/margherita_pizza.png",
+    tags: ["Vegetarian"],
