@@ -141,3 +141,13 @@ export const recipes = [
     rating: 4.9,
     image: "/images/lava_cake.png",
     tags: ["Vegetarian"],
+    ingredients: [
+      { name: "dark chocolate", quantity: 4, unit: "oz" },
+      { name: "butter", quantity: 0.25, unit: "cup" },
+      { name: "sugar", quantity: 0.25, unit: "cup" },
+      { name: "eggs", quantity: 2, unit: "whole" },
+      { name: "flour", quantity: 2, unit: "tbsp" },
+      { name: "vanilla extract", quantity: 0.5, unit: "tsp" },
+      { name: "salt", quantity: 0.125, unit: "tsp" },
+      { name: "cocoa powder", quantity: 1, unit: "tbsp", optional: true }
+    ],
