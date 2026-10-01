@@ -186,3 +186,11 @@ export const recipes = [
       { name: "salt", quantity: 0.5, unit: "tsp" },
       { name: "black pepper", quantity: 0.25, unit: "tsp" }
     ],
+    instructions: [
+      "Rinse and drain the canned chickpeas. Place them in a large mixing bowl.",
+      "Dice the cucumber, halve the cherry tomatoes, thinly slice the red onion, and chop the olives. Add them all to the bowl with the chickpeas.",
+      "In a small jar or bowl, whisk together the olive oil, lemon juice, dried oregano, salt, and black pepper to form the vinaigrette.",
+      "Pour the dressing over the salad and toss well to ensure everything is evenly coated.",
+      "Gently crumble the feta cheese over the top and stir lightly to combine. Let chill for 10 minutes in the fridge before serving to let flavors meld."
+    ]
+  },
