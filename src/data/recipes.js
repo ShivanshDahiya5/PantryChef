@@ -90,3 +90,12 @@ export const recipes = [
       { name: "green onions", quantity: 2, unit: "stalks" },
       { name: "sesame seeds", quantity: 1, unit: "tsp", optional: true }
     ],
+    instructions: [
+      "Press the tofu block with paper towels to remove excess moisture. Cut into bite-sized cubes.",
+      "In a small bowl, whisk together soy sauce, sesame oil, minced ginger, minced garlic, maple syrup, and sriracha to create the sauce.",
+      "Heat 1 tbsp of sesame oil in a wok or large frying pan over medium-high heat. Add tofu cubes and cook for 6-8 minutes, turning occasionally, until crispy and golden on all sides. Remove tofu and set aside.",
+      "Add remaining sesame oil to the pan. Add broccoli florets, sliced bell pepper, and sliced carrots. Stir-fry for 4-5 minutes until crisp-tender.",
+      "Pour the sauce over the vegetables and add the crispy tofu back to the pan. Toss everything to coat and cook for 2 minutes until the sauce bubbles and thickens slightly.",
+      "Garnish with chopped green onions and toasted sesame seeds, then serve hot over rice or noodles."
+    ]
+  },
