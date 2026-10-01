@@ -120,3 +120,12 @@ export const recipes = [
       { name: "garlic", quantity: 1, unit: "clove", optional: true },
       { name: "sea salt", quantity: 0.25, unit: "tsp" }
     ],
+    instructions: [
+      "Preheat your oven to its highest setting (usually 500°F/260°C) with a pizza stone inside, if you have one.",
+      "On a floured surface, stretch the pizza dough out into a 12-inch circle, keeping the borders slightly thicker.",
+      "Spread the tomato sauce evenly over the dough, leaving a 1-inch border around the edge.",
+      "Tear the fresh mozzarella cheese into chunks and distribute them evenly over the sauce. Sprinkle minced garlic if using.",
+      "Carefully transfer the pizza to the preheated oven/stone and bake for 8-10 minutes, or until the crust is charred and golden, and the cheese is melted and bubbling.",
+      "Immediately out of the oven, scatter fresh basil leaves over the pizza, drizzle with extra virgin olive oil, sprinkle with sea salt, and slice."
+    ]
+  },
