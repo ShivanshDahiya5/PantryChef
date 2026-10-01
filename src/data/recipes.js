@@ -225,3 +225,15 @@ export const recipes = [
       "Stack the pancakes on a plate and serve topped with fresh berries, banana slices, and a drizzle of real maple syrup."
     ]
   },
+  {
+    id: "chicken-curry",
+    name: "Creamy Coconut Chicken Curry",
+    description: "Tender chicken breasts simmered in a warm, fragrant yellow curry coconut broth with tender sweet potatoes and red bell peppers.",
+    category: "Dinner",
+    prepTime: 15,
+    cookTime: 20,
+    servings: 4,
+    difficulty: "Medium",
+    rating: 4.8,
+    image: "/images/chicken_curry.png",
+    tags: ["Gluten-Free", "Dairy-Free"],
