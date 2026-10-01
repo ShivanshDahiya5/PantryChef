@@ -111,3 +111,12 @@ export const recipes = [
     rating: 4.8,
     image: "/images/margherita_pizza.png",
     tags: ["Vegetarian"],
+    ingredients: [
+      { name: "pizza dough", quantity: 1, unit: "ball" },
+      { name: "tomato sauce", quantity: 0.5, unit: "cup" },
+      { name: "mozzarella cheese", quantity: 4, unit: "oz" },
+      { name: "fresh basil", quantity: 8, unit: "leaves" },
+      { name: "olive oil", quantity: 1, unit: "tbsp" },
+      { name: "garlic", quantity: 1, unit: "clove", optional: true },
+      { name: "sea salt", quantity: 0.25, unit: "tsp" }
+    ],
