@@ -64,3 +64,15 @@ export const recipes = [
       "Gently place the poached egg in the center. Sprinkle with red pepper flakes and microgreens if desired, and serve immediately."
     ]
   },
+  {
+    id: "tofu-stir-fry",
+    name: "Spicy Sesame Tofu Stir-Fry",
+    description: "Crispy pan-fried tofu tossed with fresh broccoli, crisp bell peppers, and carrots in a savory, sweet, and spicy ginger-soy glaze.",
+    category: "Lunch",
+    prepTime: 10,
+    cookTime: 10,
+    servings: 3,
+    difficulty: "Easy",
+    rating: 4.6,
+    image: "/images/tofu_stir_fry.png",
+    tags: ["Vegan", "Vegetarian", "Dairy-Free", "Gluten-Free"],
