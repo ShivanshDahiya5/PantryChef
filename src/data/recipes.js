@@ -161,3 +161,15 @@ export const recipes = [
       "Let cool for 2 minutes, then place a plate inverted over the ramekin and carefully flip both over. Let sit for 10 seconds, then lift the ramekin. Garnish with powdered sugar or berries and serve warm."
     ]
   },
+  {
+    id: "greek-salad",
+    name: "Mediterranean Greek Chickpea Salad",
+    description: "A refreshing and crisp salad packed with chickpeas, juicy cherry tomatoes, cucumbers, red onion, kalamata olives, and crumbled feta, tossed in a zesty lemon-herb dressing.",
+    category: "Lunch",
+    prepTime: 10,
+    cookTime: 0,
+    servings: 4,
+    difficulty: "Easy",
+    rating: 4.5,
+    image: "/images/greek_salad.png",
+    tags: ["Vegetarian", "Gluten-Free"],
