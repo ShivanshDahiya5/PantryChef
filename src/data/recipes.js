@@ -76,3 +76,17 @@ export const recipes = [
     rating: 4.6,
     image: "/images/tofu_stir_fry.png",
     tags: ["Vegan", "Vegetarian", "Dairy-Free", "Gluten-Free"],
+    ingredients: [
+      { name: "firm tofu", quantity: 1, unit: "block" },
+      { name: "broccoli", quantity: 1.5, unit: "cups" },
+      { name: "bell pepper", quantity: 1, unit: "whole" },
+      { name: "carrots", quantity: 1, unit: "whole" },
+      { name: "soy sauce", quantity: 3, unit: "tbsp" },
+      { name: "sesame oil", quantity: 2, unit: "tbsp" },
+      { name: "garlic", quantity: 3, unit: "cloves" },
+      { name: "ginger", quantity: 1, unit: "tbsp" },
+      { name: "maple syrup", quantity: 1, unit: "tbsp" },
+      { name: "sriracha", quantity: 1, unit: "tbsp" },
+      { name: "green onions", quantity: 2, unit: "stalks" },
+      { name: "sesame seeds", quantity: 1, unit: "tsp", optional: true }
+    ],
