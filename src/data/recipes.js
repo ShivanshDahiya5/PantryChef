@@ -237,3 +237,16 @@ export const recipes = [
     rating: 4.8,
     image: "/images/chicken_curry.png",
     tags: ["Gluten-Free", "Dairy-Free"],
+    ingredients: [
+      { name: "chicken breast", quantity: 1.5, unit: "lbs" },
+      { name: "coconut milk", quantity: 1, unit: "can" },
+      { name: "yellow curry powder", quantity: 2, unit: "tbsp" },
+      { name: "onion", quantity: 1, unit: "whole" },
+      { name: "garlic", quantity: 3, unit: "cloves" },
+      { name: "ginger", quantity: 1, unit: "tbsp" },
+      { name: "bell pepper", quantity: 1, unit: "whole" },
+      { name: "sweet potato", quantity: 1, unit: "whole" },
+      { name: "olive oil", quantity: 1, unit: "tbsp" },
+      { name: "cilantro", quantity: 0.25, unit: "cup", optional: true },
+      { name: "lime juice", quantity: 1, unit: "tbsp" }
+    ],
