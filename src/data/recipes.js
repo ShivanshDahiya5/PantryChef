@@ -173,3 +173,16 @@ export const recipes = [
     rating: 4.5,
     image: "/images/greek_salad.png",
     tags: ["Vegetarian", "Gluten-Free"],
+    ingredients: [
+      { name: "chickpeas", quantity: 1, unit: "can" },
+      { name: "cucumber", quantity: 1, unit: "whole" },
+      { name: "cherry tomatoes", quantity: 1, unit: "cup" },
+      { name: "red onion", quantity: 0.5, unit: "whole" },
+      { name: "kalamata olives", quantity: 0.5, unit: "cup" },
+      { name: "feta cheese", quantity: 0.5, unit: "cup" },
+      { name: "olive oil", quantity: 3, unit: "tbsp" },
+      { name: "lemon juice", quantity: 2, unit: "tbsp" },
+      { name: "dried oregano", quantity: 1, unit: "tsp" },
+      { name: "salt", quantity: 0.5, unit: "tsp" },
+      { name: "black pepper", quantity: 0.25, unit: "tsp" }
+    ],
