@@ -250,3 +250,12 @@ export const recipes = [
       { name: "cilantro", quantity: 0.25, unit: "cup", optional: true },
       { name: "lime juice", quantity: 1, unit: "tbsp" }
     ],
+    instructions: [
+      "Cut the chicken breast into bite-sized chunks. Dice the onion, mince the garlic and ginger, and chop the bell pepper and sweet potato into cubes.",
+      "Heat olive oil in a large pot over medium heat. Add the diced onion and cook for 3 minutes until translucent. Add minced garlic and ginger and cook for 1 more minute.",
+      "Add the chicken chunks and curry powder, stirring well to coat the chicken. Cook for 5 minutes until chicken is sealed and starting to brown.",
+      "Pour in the coconut milk, then add the sweet potato and bell pepper cubes. Bring the mixture to a simmer.",
+      "Reduce heat to medium-low, cover, and let simmer for 15-20 minutes, or until the sweet potatoes are tender and the chicken is fully cooked.",
+      "Stir in the lime juice. Ladle the hot curry into bowls, garnish with fresh chopped cilantro, and serve with jasmine rice."
+    ]
+  },
