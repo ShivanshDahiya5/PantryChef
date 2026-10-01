@@ -55,3 +55,12 @@ export const recipes = [
       { name: "black pepper", quantity: 0.25, unit: "tsp" },
       { name: "microgreens", quantity: 1, unit: "pinch", optional: true }
     ],
+    instructions: [
+      "Bring a small pot of water with a dash of vinegar to a gentle simmer. Crack the egg into a small cup, swirl the water, and gently slip the egg in. Poach for 3-4 minutes until the whites are set but the yolk is runny. Remove with a slotted spoon.",
+      "Toast the slice of sourdough bread until crispy and golden brown.",
+      "In a bowl, mash the avocado with lemon juice, salt, and black pepper to a chunky-smooth consistency.",
+      "Spread the mashed avocado generously over the toasted sourdough.",
+      "Slice the cherry tomatoes and place them on top of the avocado bed.",
+      "Gently place the poached egg in the center. Sprinkle with red pepper flakes and microgreens if desired, and serve immediately."
+    ]
+  },
