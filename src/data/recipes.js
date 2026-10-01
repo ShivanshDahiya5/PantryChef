@@ -129,3 +129,15 @@ export const recipes = [
       "Immediately out of the oven, scatter fresh basil leaves over the pizza, drizzle with extra virgin olive oil, sprinkle with sea salt, and slice."
     ]
   },
+  {
+    id: "lava-cake",
+    name: "Decadent Chocolate Lava Cake",
+    description: "Rich chocolate cakes with a luscious, warm molten chocolate center. The perfect elegant dessert to impress guests or treat yourself.",
+    category: "Dessert",
+    prepTime: 10,
+    cookTime: 10,
+    servings: 2,
+    difficulty: "Hard",
+    rating: 4.9,
+    image: "/images/lava_cake.png",
+    tags: ["Vegetarian"],
