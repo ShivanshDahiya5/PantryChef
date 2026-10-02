@@ -310,3 +310,13 @@ export const recipes = [
       { name: "garlic", quantity: 1, unit: "clove" },
       { name: "tortilla chips", quantity: 1, unit: "bag" }
     ],
+    instructions: [
+      "Cut the avocados in half, remove the pits, and scoop the flesh into a medium mixing bowl.",
+      "Use a fork to mash the avocado to your desired consistency (leaving it slightly chunky is traditional!). Stir in the lime juice immediately to prevent browning.",
+      "Finely dice the red onion, mince the garlic and jalapeno (seeds removed for less heat), chop the cilantro, and dice the cherry tomatoes.",
+      "Fold the diced onion, garlic, jalapeno, cilantro, and tomatoes into the mashed avocado.",
+      "Season with salt to taste, stirring gently to combine.",
+      "Transfer to a serving bowl and serve immediately alongside a big bowl of warm, salted tortilla chips."
+    ]
+  }
+];
