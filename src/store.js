@@ -10,3 +10,17 @@ const loadPantry = () => {
     return [];
   }
 };
+
+const loadCustomRecipes = () => {
+  try {
+    const data = localStorage.getItem('pantrychef_custom_recipes');
+    return data ? JSON.parse(data) : [];
+  } catch (e) {
+    console.error('Failed to load custom recipes', e);
+    return [];
+  }
+};
+
+const savePantry = (pantry) => {
+  localStorage.setItem('pantrychef_pantry', JSON.stringify(pantry));
+};
