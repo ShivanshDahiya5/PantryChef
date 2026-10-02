@@ -24,3 +24,20 @@ const loadCustomRecipes = () => {
 const savePantry = (pantry) => {
   localStorage.setItem('pantrychef_pantry', JSON.stringify(pantry));
 };
+
+const saveCustomRecipes = (recipes) => {
+  localStorage.setItem('pantrychef_custom_recipes', JSON.stringify(recipes));
+};
+
+// Initial state values
+let state = {
+  pantryIngredients: loadPantry(),
+  customRecipes: loadCustomRecipes(),
+  searchQuery: '',
+  activeFilters: {
+    category: 'All',
+    dietary: [], // Array of active tags e.g. ['Gluten-Free']
+    sortBy: 'rating', // 'rating', 'prepTime', 'difficulty'
+    matchingMode: 'any' // 'any', 'all', 'ready-to-cook'
+  }
+};
