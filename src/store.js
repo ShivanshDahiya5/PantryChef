@@ -103,3 +103,11 @@ export const store = {
     state.searchQuery = query;
     notify();
   },
+
+  setCategory(category) {
+    state.activeFilters = {
+      ...state.activeFilters,
+      category
+    };
+    notify();
+  },
