@@ -92,3 +92,9 @@ export const store = {
     savePantry(state.pantryIngredients);
     notify();
   },
+
+  clearPantry() {
+    state.pantryIngredients = [];
+    savePantry(state.pantryIngredients);
+    notify();
+  },
