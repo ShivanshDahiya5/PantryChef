@@ -98,3 +98,8 @@ export const store = {
     savePantry(state.pantryIngredients);
     notify();
   },
+
+  setSearchQuery(query) {
+    state.searchQuery = query;
+    notify();
+  },
