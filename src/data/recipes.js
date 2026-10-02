@@ -299,3 +299,14 @@ export const recipes = [
     rating: 4.8,
     image: "/images/guacamole_chips.png",
     tags: ["Vegan", "Vegetarian", "Gluten-Free", "Dairy-Free"],
+    ingredients: [
+      { name: "ripe avocado", quantity: 3, unit: "whole" },
+      { name: "lime juice", quantity: 2, unit: "tbsp" },
+      { name: "red onion", quantity: 0.25, unit: "cup" },
+      { name: "fresh cilantro", quantity: 0.25, unit: "cup" },
+      { name: "jalapeno", quantity: 1, unit: "whole" },
+      { name: "cherry tomatoes", quantity: 4, unit: "pieces" },
+      { name: "salt", quantity: 0.5, unit: "tsp" },
+      { name: "garlic", quantity: 1, unit: "clove" },
+      { name: "tortilla chips", quantity: 1, unit: "bag" }
+    ],
