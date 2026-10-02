@@ -259,3 +259,15 @@ export const recipes = [
       "Stir in the lime juice. Ladle the hot curry into bowls, garnish with fresh chopped cilantro, and serve with jasmine rice."
     ]
   },
+  {
+    id: "chia-pudding",
+    name: "Mango Coconut Chia Pudding",
+    description: "A creamy and nourishing dairy-free pudding packed with omega-3s, naturally sweetened and topped with fresh, vibrant mango puree and coconut flakes.",
+    category: "Breakfast",
+    prepTime: 5,
+    cookTime: 0,
+    servings: 2,
+    difficulty: "Easy",
+    rating: 4.4,
+    image: "/images/chia_pudding.png",
+    tags: ["Vegan", "Vegetarian", "Gluten-Free", "Dairy-Free"],
