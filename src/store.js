@@ -48,3 +48,13 @@ const listeners = new Set();
 const notify = () => {
   listeners.forEach(listener => listener(state));
 };
+
+// Normalize and match ingredient names
+export const isIngredientMatched = (recipeIngName, pantryList) => {
+  if (!pantryList || pantryList.length === 0) return false;
+  const name = recipeIngName.toLowerCase().trim();
+  return pantryList.some(pantryIng => {
+    const p = pantryIng.toLowerCase().trim();
+    return name.includes(p) || p.includes(name);
+  });
+};
