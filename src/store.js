@@ -58,3 +58,15 @@ export const isIngredientMatched = (recipeIngName, pantryList) => {
     return name.includes(p) || p.includes(name);
   });
 };
+
+export const store = {
+  getState() {
+    return state;
+  },
+
+  subscribe(listener) {
+    listeners.add(listener);
+    // Call listener immediately with current state
+    listener(state);
+    return () => listeners.delete(listener);
+  },
