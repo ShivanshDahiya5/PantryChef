@@ -41,3 +41,10 @@ let state = {
     matchingMode: 'any' // 'any', 'all', 'ready-to-cook'
   }
 };
+
+// Subscription listeners
+const listeners = new Set();
+
+const notify = () => {
+  listeners.forEach(listener => listener(state));
+};
