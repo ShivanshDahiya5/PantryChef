@@ -84,3 +84,11 @@ export const store = {
       notify();
     }
   },
+
+    removePantryIngredient(ingredient) {
+    state.pantryIngredients = state.pantryIngredients.filter(
+      i => i.toLowerCase() !== ingredient.toLowerCase()
+    );
+    savePantry(state.pantryIngredients);
+    notify();
+  },
