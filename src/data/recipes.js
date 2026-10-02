@@ -287,3 +287,15 @@ export const recipes = [
       "To serve, layer the set chia pudding and mango puree in glasses, and top with toasted coconut flakes."
     ]
   },
+  {
+    id: "guacamole-chips",
+    name: "Classic Guacamole & Tortilla Chips",
+    description: "Authentic Mexican guacamole made with creamy Hass avocados, tangy lime, spicy jalapeno, and fresh tomatoes, served with warm, crispy tortilla chips.",
+    category: "Snack",
+    prepTime: 10,
+    cookTime: 0,
+    servings: 4,
+    difficulty: "Easy",
+    rating: 4.8,
+    image: "/images/guacamole_chips.png",
+    tags: ["Vegan", "Vegetarian", "Gluten-Free", "Dairy-Free"],
