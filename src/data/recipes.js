@@ -271,3 +271,11 @@ export const recipes = [
     rating: 4.4,
     image: "/images/chia_pudding.png",
     tags: ["Vegan", "Vegetarian", "Gluten-Free", "Dairy-Free"],
+    ingredients: [
+      { name: "chia seeds", quantity: 0.25, unit: "cup" },
+      { name: "coconut milk", quantity: 1, unit: "cup" },
+      { name: "maple syrup", quantity: 1, unit: "tbsp" },
+      { name: "vanilla extract", quantity: 0.5, unit: "tsp" },
+      { name: "ripe mango", quantity: 1, unit: "whole" },
+      { name: "coconut flakes", quantity: 2, unit: "tbsp", optional: true }
+    ],
