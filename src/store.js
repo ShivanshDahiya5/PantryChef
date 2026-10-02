@@ -70,3 +70,17 @@ export const store = {
     listener(state);
     return () => listeners.delete(listener);
   },
+
+  addPantryIngredient(ingredient) {
+    const trimmed = ingredient.trim();
+    if (!trimmed) return;
+    const lower = trimmed.toLowerCase();
+    
+    // Avoid duplicates
+    const exists = state.pantryIngredients.some(i => i.toLowerCase() === lower);
+    if (!exists) {
+      state.pantryIngredients = [...state.pantryIngredients, trimmed];
+      savePantry(state.pantryIngredients);
+      notify();
+    }
+  },
