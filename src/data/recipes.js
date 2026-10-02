@@ -279,3 +279,11 @@ export const recipes = [
       { name: "ripe mango", quantity: 1, unit: "whole" },
       { name: "coconut flakes", quantity: 2, unit: "tbsp", optional: true }
     ],
+    instructions: [
+      "In a bowl or jar, whisk together the chia seeds, coconut milk, maple syrup, and vanilla extract. Whisk thoroughly to avoid clumping.",
+      "Let the mixture sit for 5 minutes, then give it another good stir to ensure chia seeds are suspended evenly.",
+      "Cover and place in the refrigerator for at least 4 hours, or overnight, to thicken into a pudding.",
+      "Peel the ripe mango and blend or mash its flesh into a smooth fruit puree.",
+      "To serve, layer the set chia pudding and mango puree in glasses, and top with toasted coconut flakes."
+    ]
+  },
