@@ -236,3 +236,13 @@ export const store = {
         // Secondary sorting based on active filters
         if (sortBy === 'rating') {
           return b.rating - a.rating;
+          } else if (sortBy === 'prepTime') {
+          return (a.prepTime + a.cookTime) - (b.prepTime + b.cookTime); // Shortest total time first
+        } else if (sortBy === 'difficulty') {
+          const difficultyWeight = { 'Easy': 1, 'Medium': 2, 'Hard': 3 };
+          return difficultyWeight[a.difficulty] - difficultyWeight[b.difficulty]; // Easiest first
+        }
+
+        return 0;
+      });
+  },
