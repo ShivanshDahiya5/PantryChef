@@ -155,3 +155,9 @@ export const store = {
     saveCustomRecipes(state.customRecipes);
     notify();
   },
+
+    deleteCustomRecipe(id) {
+    state.customRecipes = state.customRecipes.filter(r => r.id !== id);
+    saveCustomRecipes(state.customRecipes);
+    notify();
+  },
