@@ -178,3 +178,17 @@ export const store = {
           const ingredientsMatch = recipe.ingredients.some(i => i.name.toLowerCase().includes(q));
           if (!nameMatch && !descMatch && !ingredientsMatch) return false;
         }
+
+        // 2. Category filter
+        if (category !== 'All' && recipe.category !== category) {
+          return false;
+        }
+
+        // 3. Dietary tag filter (All selected dietary tags must be met)
+        if (dietary.length > 0) {
+          const recipeTags = (recipe.tags || []).map(t => t.toLowerCase());
+          const matchAllDiets = dietary.every(diet => 
+            recipeTags.includes(diet.toLowerCase())
+          );
+          if (!matchAllDiets) return false;
+        }
