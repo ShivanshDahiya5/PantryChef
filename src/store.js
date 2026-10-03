@@ -192,3 +192,11 @@ export const store = {
           );
           if (!matchAllDiets) return false;
         }
+
+        // 4. Pantry Matching Filter
+        if (pantryIngredients.length > 0) {
+          // Calculate matching details
+          const requiredIngredients = recipe.ingredients.filter(i => !i.optional);
+          const matchedIngredientsCount = requiredIngredients.filter(i => 
+            isIngredientMatched(i.name, pantryIngredients)
+          ).length;
