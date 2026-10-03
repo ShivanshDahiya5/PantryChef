@@ -167,3 +167,14 @@ export const store = {
     const allRecipes = [...defaultRecipes, ...state.customRecipes];
     const { category, dietary, sortBy, matchingMode } = state.activeFilters;
     const { pantryIngredients, searchQuery } = state;
+
+        return allRecipes
+      .filter(recipe => {
+        // 1. Text Search query filter
+        if (searchQuery.trim()) {
+          const q = searchQuery.toLowerCase().trim();
+          const nameMatch = recipe.name.toLowerCase().includes(q);
+          const descMatch = recipe.description.toLowerCase().includes(q);
+          const ingredientsMatch = recipe.ingredients.some(i => i.name.toLowerCase().includes(q));
+          if (!nameMatch && !descMatch && !ingredientsMatch) return false;
+        }
