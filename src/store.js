@@ -246,3 +246,8 @@ export const store = {
         return 0;
       });
   },
+
+    // Extract a list of all unique ingredients across the recipe database for autocomplete suggestions
+  getAllIngredients() {
+    const allRecipes = [...defaultRecipes, ...state.customRecipes];
+    const ingredientsSet = new Set();
