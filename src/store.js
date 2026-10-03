@@ -119,3 +119,11 @@ export const store = {
     if (index > -1) {
       nextDiets = currentDiets.filter(t => t !== tag);
     } else {
+      nextDiets = [...currentDiets, tag];
+    }
+    state.activeFilters = {
+      ...state.activeFilters,
+      dietary: nextDiets
+    };
+    notify();
+  },
