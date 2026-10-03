@@ -227,3 +227,12 @@ export const store = {
 
           const ratioA = getMatchRatio(a);
           const ratioB = getMatchRatio(b);
+
+          if (ratioA !== ratioB) {
+            return ratioB - ratioA; // Higher match ratio first
+          }
+        }
+
+        // Secondary sorting based on active filters
+        if (sortBy === 'rating') {
+          return b.rating - a.rating;
