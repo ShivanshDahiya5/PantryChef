@@ -75,7 +75,7 @@ export const store = {
     const trimmed = ingredient.trim();
     if (!trimmed) return;
     const lower = trimmed.toLowerCase();
-    
+
     // Avoid duplicates
     const exists = state.pantryIngredients.some(i => i.toLowerCase() === lower);
     if (!exists) {
@@ -85,7 +85,7 @@ export const store = {
     }
   },
 
-    removePantryIngredient(ingredient) {
+  removePantryIngredient(ingredient) {
     state.pantryIngredients = state.pantryIngredients.filter(
       i => i.toLowerCase() !== ingredient.toLowerCase()
     );
@@ -112,7 +112,7 @@ export const store = {
     notify();
   },
 
-    toggleDietary(tag) {
+  toggleDietary(tag) {
     const currentDiets = state.activeFilters.dietary;
     const index = currentDiets.indexOf(tag);
     let nextDiets;
@@ -128,7 +128,7 @@ export const store = {
     notify();
   },
 
-    setSortBy(sortBy) {
+  setSortBy(sortBy) {
     state.activeFilters = {
       ...state.activeFilters,
       sortBy
@@ -136,7 +136,7 @@ export const store = {
     notify();
   },
 
-    setMatchingMode(mode) {
+  setMatchingMode(mode) {
     state.activeFilters = {
       ...state.activeFilters,
       matchingMode: mode
@@ -144,7 +144,7 @@ export const store = {
     notify();
   },
 
-    addCustomRecipe(recipe) {
+  addCustomRecipe(recipe) {
     const newRecipe = {
       ...recipe,
       id: `custom-${Date.now()}`,
@@ -156,19 +156,19 @@ export const store = {
     notify();
   },
 
-    deleteCustomRecipe(id) {
+  deleteCustomRecipe(id) {
     state.customRecipes = state.customRecipes.filter(r => r.id !== id);
     saveCustomRecipes(state.customRecipes);
     notify();
   },
 
-    // Core Filtering Engine
+  // Core Filtering Engine
   getFilteredRecipes() {
     const allRecipes = [...defaultRecipes, ...state.customRecipes];
     const { category, dietary, sortBy, matchingMode } = state.activeFilters;
     const { pantryIngredients, searchQuery } = state;
 
-        return allRecipes
+    return allRecipes
       .filter(recipe => {
         // 1. Text Search query filter
         if (searchQuery.trim()) {
@@ -187,7 +187,7 @@ export const store = {
         // 3. Dietary tag filter (All selected dietary tags must be met)
         if (dietary.length > 0) {
           const recipeTags = (recipe.tags || []).map(t => t.toLowerCase());
-          const matchAllDiets = dietary.every(diet => 
+          const matchAllDiets = dietary.every(diet =>
             recipeTags.includes(diet.toLowerCase())
           );
           if (!matchAllDiets) return false;
@@ -197,7 +197,7 @@ export const store = {
         if (pantryIngredients.length > 0) {
           // Calculate matching details
           const requiredIngredients = recipe.ingredients.filter(i => !i.optional);
-          const matchedIngredientsCount = requiredIngredients.filter(i => 
+          const matchedIngredientsCount = requiredIngredients.filter(i =>
             isIngredientMatched(i.name, pantryIngredients)
           ).length;
 
@@ -211,7 +211,7 @@ export const store = {
             // Recipe can have at most 2 missing ingredients
             if (missingCount > 2) return false;
           }
-          }
+        }
 
         return true;
       })
@@ -236,7 +236,7 @@ export const store = {
         // Secondary sorting based on active filters
         if (sortBy === 'rating') {
           return b.rating - a.rating;
-          } else if (sortBy === 'prepTime') {
+        } else if (sortBy === 'prepTime') {
           return (a.prepTime + a.cookTime) - (b.prepTime + b.cookTime); // Shortest total time first
         } else if (sortBy === 'difficulty') {
           const difficultyWeight = { 'Easy': 1, 'Medium': 2, 'Hard': 3 };
@@ -247,7 +247,15 @@ export const store = {
       });
   },
 
-    // Extract a list of all unique ingredients across the recipe database for autocomplete suggestions
+  // Extract a list of all unique ingredients across the recipe database for autocomplete suggestions
   getAllIngredients() {
     const allRecipes = [...defaultRecipes, ...state.customRecipes];
     const ingredientsSet = new Set();
+    allRecipes.forEach(recipe => {
+      recipe.ingredients.forEach(ing => {
+        ingredientsSet.add(ing.name.toLowerCase().trim());
+      });
+    });
+    return Array.from(ingredientsSet).sort();
+  }
+};
