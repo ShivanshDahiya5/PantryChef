@@ -143,3 +143,15 @@ export const store = {
     };
     notify();
   },
+
+    addCustomRecipe(recipe) {
+    const newRecipe = {
+      ...recipe,
+      id: `custom-${Date.now()}`,
+      rating: 5.0, // New recipe starts with a great rating!
+      image: recipe.image || '/images/custom_placeholder.png'
+    };
+    state.customRecipes = [...state.customRecipes, newRecipe];
+    saveCustomRecipes(state.customRecipes);
+    notify();
+  },
