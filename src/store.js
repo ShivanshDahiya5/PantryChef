@@ -161,3 +161,9 @@ export const store = {
     saveCustomRecipes(state.customRecipes);
     notify();
   },
+
+    // Core Filtering Engine
+  getFilteredRecipes() {
+    const allRecipes = [...defaultRecipes, ...state.customRecipes];
+    const { category, dietary, sortBy, matchingMode } = state.activeFilters;
+    const { pantryIngredients, searchQuery } = state;
