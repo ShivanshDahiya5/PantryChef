@@ -127,3 +127,11 @@ export const store = {
     };
     notify();
   },
+
+    setSortBy(sortBy) {
+    state.activeFilters = {
+      ...state.activeFilters,
+      sortBy
+    };
+    notify();
+  },
