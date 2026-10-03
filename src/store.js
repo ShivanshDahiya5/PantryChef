@@ -211,3 +211,12 @@ export const store = {
             // Recipe can have at most 2 missing ingredients
             if (missingCount > 2) return false;
           }
+          }
+
+        return true;
+      })
+      .sort((a, b) => {
+        // If pantry is not empty, and matchingMode is 'any', sort primarily by ingredient match percentage
+        if (pantryIngredients.length > 0) {
+          const getMatchRatio = (recipe) => {
+            const req = recipe.ingredients.filter(i => !i.optional);
