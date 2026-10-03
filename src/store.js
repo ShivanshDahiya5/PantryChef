@@ -111,3 +111,11 @@ export const store = {
     };
     notify();
   },
+
+    toggleDietary(tag) {
+    const currentDiets = state.activeFilters.dietary;
+    const index = currentDiets.indexOf(tag);
+    let nextDiets;
+    if (index > -1) {
+      nextDiets = currentDiets.filter(t => t !== tag);
+    } else {
