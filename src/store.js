@@ -220,3 +220,10 @@ export const store = {
         if (pantryIngredients.length > 0) {
           const getMatchRatio = (recipe) => {
             const req = recipe.ingredients.filter(i => !i.optional);
+            if (req.length === 0) return 0;
+            const matched = req.filter(i => isIngredientMatched(i.name, pantryIngredients)).length;
+            return matched / req.length;
+          };
+
+          const ratioA = getMatchRatio(a);
+          const ratioB = getMatchRatio(b);
