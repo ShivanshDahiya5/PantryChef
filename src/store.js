@@ -135,3 +135,11 @@ export const store = {
     };
     notify();
   },
+
+    setMatchingMode(mode) {
+    state.activeFilters = {
+      ...state.activeFilters,
+      matchingMode: mode
+    };
+    notify();
+  },
