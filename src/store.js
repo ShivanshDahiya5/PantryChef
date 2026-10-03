@@ -200,3 +200,14 @@ export const store = {
           const matchedIngredientsCount = requiredIngredients.filter(i => 
             isIngredientMatched(i.name, pantryIngredients)
           ).length;
+
+          const totalRequiredCount = requiredIngredients.length;
+          const missingCount = totalRequiredCount - matchedIngredientsCount;
+
+          if (matchingMode === 'all') {
+            // Recipe must have all ingredients matched (missingCount === 0)
+            if (missingCount > 0) return false;
+          } else if (matchingMode === 'ready-to-cook') {
+            // Recipe can have at most 2 missing ingredients
+            if (missingCount > 2) return false;
+          }
