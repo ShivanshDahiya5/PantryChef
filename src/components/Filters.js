@@ -46,3 +46,8 @@ export function initFilters(container) {
       </div>
     </div>
   `;
+
+    const searchInput = container.querySelector('#recipe-search');
+  const categoryTabs = container.querySelectorAll('.category-tab');
+  const dietaryBtns = container.querySelectorAll('.dietary-btn');
+  const sortSelect = container.querySelector('#recipe-sort');
