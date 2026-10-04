@@ -1,7 +1,7 @@
 import { store } from '../store.js';
 
 export function initFilters(container) {
-  container.innerHTML = `
+    container.innerHTML = `
     <div class="filters-panel">
       <!-- Search Input -->
       <div class="search-bar">
@@ -48,65 +48,65 @@ export function initFilters(container) {
   `;
 
     const searchInput = container.querySelector('#recipe-search');
-  const categoryTabs = container.querySelectorAll('.category-tab');
-  const dietaryBtns = container.querySelectorAll('.dietary-btn');
-  const sortSelect = container.querySelector('#recipe-sort');
+    const categoryTabs = container.querySelectorAll('.category-tab');
+    const dietaryBtns = container.querySelectorAll('.dietary-btn');
+    const sortSelect = container.querySelector('#recipe-sort');
 
     // Search input change handler (debounced or simple input listener)
-  searchInput.addEventListener('input', (e) => {
-    store.setSearchQuery(e.target.value);
-  });
+    searchInput.addEventListener('input', (e) => {
+        store.setSearchQuery(e.target.value);
+    });
 
     // Category tab click handlers
-  categoryTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      store.setCategory(tab.dataset.category);
+    categoryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            store.setCategory(tab.dataset.category);
+        });
     });
-  });
 
     // Dietary filter buttons toggle handlers
-  dietaryBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      store.toggleDietary(btn.dataset.tag);
+    dietaryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            store.toggleDietary(btn.dataset.tag);
+        });
     });
-  });
 
     // Sort select change handler
-  sortSelect.addEventListener('change', (e) => {
-    store.setSortBy(e.target.value);
-  });
+    sortSelect.addEventListener('change', (e) => {
+        store.setSortBy(e.target.value);
+    });
 
     // Subscribe to store updates to sync component UI elements
-  store.subscribe((state) => {
-    const { searchQuery, activeFilters } = state;
-    
-    // 1. Sync search input value if focused out
-    if (document.activeElement !== searchInput) {
-      searchInput.value = searchQuery;
-    }
+    store.subscribe((state) => {
+        const { searchQuery, activeFilters } = state;
+
+        // 1. Sync search input value if focused out
+        if (document.activeElement !== searchInput) {
+            searchInput.value = searchQuery;
+        }
 
         // 2. Sync category tabs
-    categoryTabs.forEach(tab => {
-      if (tab.dataset.category === activeFilters.category) {
-        tab.classList.add('active');
-      } else {
-        tab.classList.remove('active');
-      }
-    });
+        categoryTabs.forEach(tab => {
+            if (tab.dataset.category === activeFilters.category) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
 
         // 3. Sync dietary toggle buttons
-    dietaryBtns.forEach(btn => {
-      const isSelected = activeFilters.dietary.includes(btn.dataset.tag);
-      if (isSelected) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
+        dietaryBtns.forEach(btn => {
+            const isSelected = activeFilters.dietary.includes(btn.dataset.tag);
+            if (isSelected) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
 
         // 4. Sync sorting select value
-    if (sortSelect.value !== activeFilters.sortBy) {
-      sortSelect.value = activeFilters.sortBy;
-    }
-  });
+        if (sortSelect.value !== activeFilters.sortBy) {
+            sortSelect.value = activeFilters.sortBy;
+        }
+    });
 }
