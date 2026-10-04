@@ -84,3 +84,12 @@ export function initFilters(container) {
     if (document.activeElement !== searchInput) {
       searchInput.value = searchQuery;
     }
+
+        // 2. Sync category tabs
+    categoryTabs.forEach(tab => {
+      if (tab.dataset.category === activeFilters.category) {
+        tab.classList.add('active');
+      } else {
+        tab.classList.remove('active');
+      }
+    });
