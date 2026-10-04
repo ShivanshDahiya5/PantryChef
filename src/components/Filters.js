@@ -93,3 +93,13 @@ export function initFilters(container) {
         tab.classList.remove('active');
       }
     });
+
+        // 3. Sync dietary toggle buttons
+    dietaryBtns.forEach(btn => {
+      const isSelected = activeFilters.dietary.includes(btn.dataset.tag);
+      if (isSelected) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
