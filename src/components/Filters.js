@@ -12,3 +12,13 @@ export function initFilters(container) {
           placeholder="Search recipes, ingredients, keywords..."
         />
       </div>
+
+            <!-- Category Tabs -->
+      <div id="category-tabs" class="category-tabs">
+        <button class="category-tab active" data-category="All">All Recipes</button>
+        <button class="category-tab" data-category="Breakfast">Breakfast</button>
+        <button class="category-tab" data-category="Lunch">Lunch</button>
+        <button class="category-tab" data-category="Dinner">Dinner</button>
+        <button class="category-tab" data-category="Dessert">Dessert</button>
+        <button class="category-tab" data-category="Snack">Snacks</button>
+      </div>
