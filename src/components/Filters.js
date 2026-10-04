@@ -75,3 +75,12 @@ export function initFilters(container) {
   sortSelect.addEventListener('change', (e) => {
     store.setSortBy(e.target.value);
   });
+
+    // Subscribe to store updates to sync component UI elements
+  store.subscribe((state) => {
+    const { searchQuery, activeFilters } = state;
+    
+    // 1. Sync search input value if focused out
+    if (document.activeElement !== searchInput) {
+      searchInput.value = searchQuery;
+    }
