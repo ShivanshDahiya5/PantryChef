@@ -63,3 +63,10 @@ export function initFilters(container) {
       store.setCategory(tab.dataset.category);
     });
   });
+
+    // Dietary filter buttons toggle handlers
+  dietaryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      store.toggleDietary(btn.dataset.tag);
+    });
+  });
