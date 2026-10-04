@@ -33,3 +33,16 @@ export function initFilters(container) {
           <button class="dietary-btn" data-tag="Dairy-Free">Dairy-Free</button>
           <button class="dietary-btn" data-tag="Low-Carb">Low-Carb</button>
         </div>
+
+                <!-- Sort drop down -->
+        <div class="sort-group">
+          <label for="recipe-sort">Sort by:</label>
+          <select id="recipe-sort" class="sort-select">
+            <option value="rating">Highest Rating</option>
+            <option value="prepTime">Fastest Cook Time</option>
+            <option value="difficulty">Easiest Difficulty</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  `;
