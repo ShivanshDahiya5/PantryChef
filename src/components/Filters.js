@@ -22,3 +22,14 @@ export function initFilters(container) {
         <button class="category-tab" data-category="Dessert">Dessert</button>
         <button class="category-tab" data-category="Snack">Snacks</button>
       </div>
+
+            <!-- Dietary and Sorting row -->
+      <div class="filter-row">
+        <!-- Dietary requirements pill list -->
+        <div id="dietary-filters" class="dietary-filters">
+          <button class="dietary-btn" data-tag="Gluten-Free">Gluten-Free</button>
+          <button class="dietary-btn" data-tag="Vegan">Vegan</button>
+          <button class="dietary-btn" data-tag="Vegetarian">Vegetarian</button>
+          <button class="dietary-btn" data-tag="Dairy-Free">Dairy-Free</button>
+          <button class="dietary-btn" data-tag="Low-Carb">Low-Carb</button>
+        </div>
