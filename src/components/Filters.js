@@ -51,3 +51,8 @@ export function initFilters(container) {
   const categoryTabs = container.querySelectorAll('.category-tab');
   const dietaryBtns = container.querySelectorAll('.dietary-btn');
   const sortSelect = container.querySelector('#recipe-sort');
+
+    // Search input change handler (debounced or simple input listener)
+  searchInput.addEventListener('input', (e) => {
+    store.setSearchQuery(e.target.value);
+  });
