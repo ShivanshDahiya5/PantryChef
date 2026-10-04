@@ -103,3 +103,10 @@ export function initFilters(container) {
         btn.classList.remove('active');
       }
     });
+
+        // 4. Sync sorting select value
+    if (sortSelect.value !== activeFilters.sortBy) {
+      sortSelect.value = activeFilters.sortBy;
+    }
+  });
+}
