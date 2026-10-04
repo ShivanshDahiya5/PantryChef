@@ -70,3 +70,8 @@ export function initFilters(container) {
       store.toggleDietary(btn.dataset.tag);
     });
   });
+
+    // Sort select change handler
+  sortSelect.addEventListener('change', (e) => {
+    store.setSortBy(e.target.value);
+  });
