@@ -56,3 +56,10 @@ export function initFilters(container) {
   searchInput.addEventListener('input', (e) => {
     store.setSearchQuery(e.target.value);
   });
+
+    // Category tab click handlers
+  categoryTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      store.setCategory(tab.dataset.category);
+    });
+  });
