@@ -50,6 +50,7 @@ const notify = () => {
 };
 
 // Normalize and match ingredient names
+// E.g., "salmon" matches "salmon fillets", or "garlic cloves" matches "garlic"
 export const isIngredientMatched = (recipeIngName, pantryList) => {
   if (!pantryList || pantryList.length === 0) return false;
   const name = recipeIngName.toLowerCase().trim();
@@ -75,7 +76,7 @@ export const store = {
     const trimmed = ingredient.trim();
     if (!trimmed) return;
     const lower = trimmed.toLowerCase();
-
+    
     // Avoid duplicates
     const exists = state.pantryIngredients.some(i => i.toLowerCase() === lower);
     if (!exists) {
@@ -187,7 +188,7 @@ export const store = {
         // 3. Dietary tag filter (All selected dietary tags must be met)
         if (dietary.length > 0) {
           const recipeTags = (recipe.tags || []).map(t => t.toLowerCase());
-          const matchAllDiets = dietary.every(diet =>
+          const matchAllDiets = dietary.every(diet => 
             recipeTags.includes(diet.toLowerCase())
           );
           if (!matchAllDiets) return false;
@@ -197,10 +198,10 @@ export const store = {
         if (pantryIngredients.length > 0) {
           // Calculate matching details
           const requiredIngredients = recipe.ingredients.filter(i => !i.optional);
-          const matchedIngredientsCount = requiredIngredients.filter(i =>
+          const matchedIngredientsCount = requiredIngredients.filter(i => 
             isIngredientMatched(i.name, pantryIngredients)
           ).length;
-
+          
           const totalRequiredCount = requiredIngredients.length;
           const missingCount = totalRequiredCount - matchedIngredientsCount;
 
@@ -235,7 +236,7 @@ export const store = {
 
         // Secondary sorting based on active filters
         if (sortBy === 'rating') {
-          return b.rating - a.rating;
+          return b.rating - a.rating; // Highest rating first
         } else if (sortBy === 'prepTime') {
           return (a.prepTime + a.cookTime) - (b.prepTime + b.cookTime); // Shortest total time first
         } else if (sortBy === 'difficulty') {
