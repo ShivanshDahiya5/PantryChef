@@ -22,3 +22,13 @@ export function initPantry(container) {
 
       <div id="pantry-tags" class="pantry-tags"></div>
       <button id="clear-pantry-btn" class="clear-pantry-btn" style="display: none;">Clear all ingredients</button>
+
+      <div class="pantry-modes">
+        <h4>Matching Engine</h4>
+        <label class="mode-option">
+          <input type="radio" name="matching-mode" value="any" checked>
+          <div class="mode-label">
+            <span class="mode-name">Match Any</span>
+            <span class="mode-desc">Show recipes containing any of these ingredients</span>
+          </div>
+        </label>
