@@ -138,3 +138,12 @@ export function initPantry(container) {
     }
 
     suggestionsList.innerHTML = currentSuggestions
+
+    .map((ing, idx) => `
+        <li class="suggestion-item ${idx === activeSuggestionIndex ? 'active' : ''}" data-value="${ing}">
+          ${ing}
+        </li>
+      `)
+      .join('');
+
+    suggestionsList.style.display = 'block';
