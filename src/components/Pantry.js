@@ -59,3 +59,12 @@ export function initPantry(container) {
 
   let activeSuggestionIndex = -1;
   let currentSuggestions = [];
+
+    const handleAddIngredient = (val) => {
+    const ingredient = val || input.value;
+    if (ingredient.trim()) {
+      store.addPantryIngredient(ingredient);
+      input.value = '';
+      hideSuggestions();
+    }
+  };
