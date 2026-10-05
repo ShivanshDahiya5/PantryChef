@@ -114,3 +114,11 @@ export function initPantry(container) {
     activeSuggestionIndex = -1;
     renderSuggestions();
   });
+
+    // Hide suggestions list
+  const hideSuggestions = () => {
+    suggestionsList.style.display = 'none';
+    suggestionsList.innerHTML = '';
+    currentSuggestions = [];
+    activeSuggestionIndex = -1;
+  };
