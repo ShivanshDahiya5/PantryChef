@@ -49,3 +49,13 @@ export function initPantry(container) {
       </div>
     </div>
   `;
+
+    const input = container.querySelector('#pantry-input');
+  const addBtn = container.querySelector('#add-ingredient-btn');
+  const suggestionsList = container.querySelector('#suggestions-list');
+  const tagsContainer = container.querySelector('#pantry-tags');
+  const clearBtn = container.querySelector('#clear-pantry-btn');
+  const modeRadios = container.querySelectorAll('input[name="matching-mode"]');
+
+  let activeSuggestionIndex = -1;
+  let currentSuggestions = [];
