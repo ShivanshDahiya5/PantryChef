@@ -95,3 +95,13 @@ export function initPantry(container) {
       hideSuggestions();
     }
   });
+
+    input.addEventListener('input', () => {
+    const val = input.value.toLowerCase().trim();
+    if (!val) {
+      hideSuggestions();
+      return;
+    }
+
+    const allIngs = store.getAllIngredients();
+    const ownedIngs = store.getState().pantryIngredients.map(i => i.toLowerCase());
