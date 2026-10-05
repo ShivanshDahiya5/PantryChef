@@ -68,3 +68,14 @@ export function initPantry(container) {
       hideSuggestions();
     }
   };
+
+    addBtn.addEventListener('click', () => handleAddIngredient());
+  
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (activeSuggestionIndex > -1 && currentSuggestions[activeSuggestionIndex]) {
+        handleAddIngredient(currentSuggestions[activeSuggestionIndex]);
+      } else {
+        handleAddIngredient();
+      }
