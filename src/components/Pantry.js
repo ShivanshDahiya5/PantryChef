@@ -147,3 +147,16 @@ export function initPantry(container) {
       .join('');
 
     suggestionsList.style.display = 'block';
+
+    // Click handler for suggestions
+    suggestionsList.querySelectorAll('.suggestion-item').forEach(item => {
+      item.addEventListener('click', () => {
+        handleAddIngredient(item.dataset.value);
+      });
+    });
+  };
+
+  // Clear all button handler
+  clearBtn.addEventListener('click', () => {
+    store.clearPantry();
+  });
