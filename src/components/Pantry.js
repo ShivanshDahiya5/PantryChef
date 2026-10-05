@@ -122,3 +122,10 @@ export function initPantry(container) {
     currentSuggestions = [];
     activeSuggestionIndex = -1;
   };
+
+    // Close suggestions when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!input.contains(e.target) && !suggestionsList.contains(e.target)) {
+      hideSuggestions();
+    }
+  });
