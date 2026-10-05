@@ -87,3 +87,11 @@ export function initPantry(container) {
       }
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
+      if (currentSuggestions.length > 0) {
+        activeSuggestionIndex = (activeSuggestionIndex - 1 + currentSuggestions.length) % currentSuggestions.length;
+        renderSuggestions();
+      }
+    } else if (e.key === 'Escape') {
+      hideSuggestions();
+    }
+  });
