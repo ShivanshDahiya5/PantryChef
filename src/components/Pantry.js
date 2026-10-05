@@ -79,3 +79,11 @@ export function initPantry(container) {
       } else {
         handleAddIngredient();
       }
+} else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (currentSuggestions.length > 0) {
+        activeSuggestionIndex = (activeSuggestionIndex + 1) % currentSuggestions.length;
+        renderSuggestions();
+      }
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
