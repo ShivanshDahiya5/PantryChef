@@ -32,3 +32,10 @@ export function initPantry(container) {
             <span class="mode-desc">Show recipes containing any of these ingredients</span>
           </div>
         </label>
+        <label class="mode-option">
+          <input type="radio" name="matching-mode" value="ready-to-cook">
+          <div class="mode-label">
+            <span class="mode-name">Ready to Cook</span>
+            <span class="mode-desc">Recipes missing at most 2 ingredients</span>
+          </div>
+        </label>
