@@ -129,3 +129,12 @@ export function initPantry(container) {
       hideSuggestions();
     }
   });
+
+    // Render suggestions UI
+  const renderSuggestions = () => {
+    if (currentSuggestions.length === 0) {
+      suggestionsList.style.display = 'none';
+      return;
+    }
+
+    suggestionsList.innerHTML = currentSuggestions
