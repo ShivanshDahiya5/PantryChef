@@ -19,3 +19,6 @@ export function initPantry(container) {
         </div>
         <ul id="suggestions-list" class="suggestions-list" style="display: none;"></ul>
       </div>
+
+      <div id="pantry-tags" class="pantry-tags"></div>
+      <button id="clear-pantry-btn" class="clear-pantry-btn" style="display: none;">Clear all ingredients</button>
