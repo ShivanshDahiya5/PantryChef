@@ -105,3 +105,12 @@ export function initPantry(container) {
 
     const allIngs = store.getAllIngredients();
     const ownedIngs = store.getState().pantryIngredients.map(i => i.toLowerCase());
+
+        // Find ingredients containing search query, not already owned
+    currentSuggestions = allIngs.filter(ing => 
+      ing.includes(val) && !ownedIngs.includes(ing)
+    ).slice(0, 6); // Limit to 6 suggestions
+
+    activeSuggestionIndex = -1;
+    renderSuggestions();
+  });
