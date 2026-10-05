@@ -160,3 +160,16 @@ export function initPantry(container) {
   clearBtn.addEventListener('click', () => {
     store.clearPantry();
   });
+
+    // Radio button matching mode change handlers
+  modeRadios.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      store.setMatchingMode(e.target.value);
+    });
+  });
+
+  // Subscribe to changes in the store to update component state
+  store.subscribe((state) => {
+    // 1. Render tags
+    const { pantryIngredients, activeFilters } = state;
+    if (pantryIngredients.length === 0) {
