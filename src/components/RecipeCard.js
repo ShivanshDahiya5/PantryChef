@@ -46,3 +46,8 @@ const progressText = isReady
     cardElement.innerHTML = `
     <div class="recipe-card-img-wrapper">
       <img src="${recipe.image}" alt="${recipe.name}" class="recipe-card-img" onerror="this.src='https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&auto=format&fit=crop&q=60'"/>
+    <span class="recipe-card-category">${recipe.category}</span>
+      <span class="recipe-card-rating">${renderStars(recipe.rating)}</span>
+      ${matchBadgeHtml}
+      ${isCustom ? `<button class="custom-delete-btn" title="Delete recipe" data-action="delete">&times;</button>` : ''}
+    </div>
