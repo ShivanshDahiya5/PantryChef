@@ -55,3 +55,12 @@ const progressText = isReady
       <h4 class="recipe-card-title">${recipe.name}</h4>
       <p class="recipe-card-desc">${recipe.description}</p>
       <div class="recipe-card-meta">
+      <span class="recipe-card-meta-item">
+          ⏱️ ${recipe.prepTime + recipe.cookTime} mins
+        </span>
+        <span class="recipe-card-meta-item">
+          🍳 ${recipe.difficulty}
+        </span>
+      </div>
+    </div>
+  `;
