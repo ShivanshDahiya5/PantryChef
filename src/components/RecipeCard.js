@@ -64,3 +64,17 @@ const progressText = isReady
       </div>
     </div>
   `;
+
+    // Prevent card click when clicking the delete button
+  cardElement.addEventListener('click', (e) => {
+    const isDelete = e.target.closest('[data-action="delete"]');
+    if (isDelete) {
+      e.stopPropagation();
+      onDeleteClick(recipe.id);
+    } else {
+      onCardClick(recipe);
+    }
+  });
+
+  return cardElement;
+}
