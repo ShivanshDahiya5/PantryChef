@@ -42,3 +42,7 @@ const progressText = isReady
   const renderStars = (rating) => {
     return `★ ${rating.toFixed(1)}`;
   };
+
+    cardElement.innerHTML = `
+    <div class="recipe-card-img-wrapper">
+      <img src="${recipe.image}" alt="${recipe.name}" class="recipe-card-img" onerror="this.src='https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&auto=format&fit=crop&q=60'"/>
