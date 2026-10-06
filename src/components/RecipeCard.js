@@ -26,3 +26,9 @@ const progressText = isReady
     matchBadgeHtml = `
       <div class="recipe-match-indicator">
         <span>${progressText}</span>
+        <div class="recipe-match-progress-bar">
+          <div class="recipe-match-progress-fill" style="width: ${matchPercentage}%; background-color: ${progressColor};"></div>
+        </div>
+      </div>
+    `;
+  }
