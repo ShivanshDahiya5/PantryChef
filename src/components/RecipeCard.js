@@ -19,3 +19,10 @@ export function createRecipeCard(recipe, pantryIngredients, onCardClick, onDelet
   if (hasPantryItems) {
     const isReady = matchedCount === totalRequired;
     const progressColor = isReady ? 'var(--success)' : 'var(--accent)';
+const progressText = isReady 
+      ? 'Ready to cook!' 
+      : `${matchedCount}/${totalRequired} ingredients`;
+      
+    matchBadgeHtml = `
+      <div class="recipe-match-indicator">
+        <span>${progressText}</span>
