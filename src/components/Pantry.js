@@ -50,7 +50,7 @@ export function initPantry(container) {
     </div>
   `;
 
-    const input = container.querySelector('#pantry-input');
+  const input = container.querySelector('#pantry-input');
   const addBtn = container.querySelector('#add-ingredient-btn');
   const suggestionsList = container.querySelector('#suggestions-list');
   const tagsContainer = container.querySelector('#pantry-tags');
@@ -60,7 +60,7 @@ export function initPantry(container) {
   let activeSuggestionIndex = -1;
   let currentSuggestions = [];
 
-    const handleAddIngredient = (val) => {
+  const handleAddIngredient = (val) => {
     const ingredient = val || input.value;
     if (ingredient.trim()) {
       store.addPantryIngredient(ingredient);
@@ -69,8 +69,8 @@ export function initPantry(container) {
     }
   };
 
-    addBtn.addEventListener('click', () => handleAddIngredient());
-  
+  addBtn.addEventListener('click', () => handleAddIngredient());
+
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
@@ -79,7 +79,7 @@ export function initPantry(container) {
       } else {
         handleAddIngredient();
       }
-} else if (e.key === 'ArrowDown') {
+    } else if (e.key === 'ArrowDown') {
       e.preventDefault();
       if (currentSuggestions.length > 0) {
         activeSuggestionIndex = (activeSuggestionIndex + 1) % currentSuggestions.length;
@@ -96,7 +96,7 @@ export function initPantry(container) {
     }
   });
 
-    input.addEventListener('input', () => {
+  input.addEventListener('input', () => {
     const val = input.value.toLowerCase().trim();
     if (!val) {
       hideSuggestions();
@@ -106,8 +106,8 @@ export function initPantry(container) {
     const allIngs = store.getAllIngredients();
     const ownedIngs = store.getState().pantryIngredients.map(i => i.toLowerCase());
 
-        // Find ingredients containing search query, not already owned
-    currentSuggestions = allIngs.filter(ing => 
+    // Find ingredients containing search query, not already owned
+    currentSuggestions = allIngs.filter(ing =>
       ing.includes(val) && !ownedIngs.includes(ing)
     ).slice(0, 6); // Limit to 6 suggestions
 
@@ -115,7 +115,7 @@ export function initPantry(container) {
     renderSuggestions();
   });
 
-    // Hide suggestions list
+  // Hide suggestions list
   const hideSuggestions = () => {
     suggestionsList.style.display = 'none';
     suggestionsList.innerHTML = '';
@@ -123,14 +123,14 @@ export function initPantry(container) {
     activeSuggestionIndex = -1;
   };
 
-    // Close suggestions when clicking outside
+  // Close suggestions when clicking outside
   document.addEventListener('click', (e) => {
     if (!input.contains(e.target) && !suggestionsList.contains(e.target)) {
       hideSuggestions();
     }
   });
 
-    // Render suggestions UI
+  // Render suggestions UI
   const renderSuggestions = () => {
     if (currentSuggestions.length === 0) {
       suggestionsList.style.display = 'none';
@@ -139,7 +139,7 @@ export function initPantry(container) {
 
     suggestionsList.innerHTML = currentSuggestions
 
-    .map((ing, idx) => `
+      .map((ing, idx) => `
         <li class="suggestion-item ${idx === activeSuggestionIndex ? 'active' : ''}" data-value="${ing}">
           ${ing}
         </li>
@@ -161,7 +161,7 @@ export function initPantry(container) {
     store.clearPantry();
   });
 
-    // Radio button matching mode change handlers
+  // Radio button matching mode change handlers
   modeRadios.forEach(radio => {
     radio.addEventListener('change', (e) => {
       store.setMatchingMode(e.target.value);
@@ -173,7 +173,7 @@ export function initPantry(container) {
     // 1. Render tags
     const { pantryIngredients, activeFilters } = state;
     if (pantryIngredients.length === 0) {
-tagsContainer.innerHTML = `<span class="pantry-empty">Your pantry is empty</span>`;
+      tagsContainer.innerHTML = `<span class="pantry-empty">Your pantry is empty</span>`;
       clearBtn.style.display = 'none';
     } else {
       tagsContainer.innerHTML = pantryIngredients
@@ -194,7 +194,7 @@ tagsContainer.innerHTML = `<span class="pantry-empty">Your pantry is empty</span
       });
     }
 
-        // 2. Sync active matching mode radio
+    // 2. Sync active matching mode radio
     const activeMode = activeFilters.matchingMode;
     const selectedRadio = container.querySelector(`input[name="matching-mode"][value="${activeMode}"]`);
     if (selectedRadio) {
