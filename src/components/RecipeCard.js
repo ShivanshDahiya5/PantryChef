@@ -51,3 +51,7 @@ const progressText = isReady
       ${matchBadgeHtml}
       ${isCustom ? `<button class="custom-delete-btn" title="Delete recipe" data-action="delete">&times;</button>` : ''}
     </div>
+    <div class="recipe-card-info">
+      <h4 class="recipe-card-title">${recipe.name}</h4>
+      <p class="recipe-card-desc">${recipe.description}</p>
+      <div class="recipe-card-meta">
