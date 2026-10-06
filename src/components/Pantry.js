@@ -193,3 +193,12 @@ tagsContainer.innerHTML = `<span class="pantry-empty">Your pantry is empty</span
         });
       });
     }
+
+        // 2. Sync active matching mode radio
+    const activeMode = activeFilters.matchingMode;
+    const selectedRadio = container.querySelector(`input[name="matching-mode"][value="${activeMode}"]`);
+    if (selectedRadio) {
+      selectedRadio.checked = true;
+    }
+  });
+}
