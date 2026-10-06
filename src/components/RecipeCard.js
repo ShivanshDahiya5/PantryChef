@@ -13,3 +13,9 @@ export function createRecipeCard(recipe, pantryIngredients, onCardClick, onDelet
   const matchPercentage = totalRequired > 0 ? Math.round((matchedCount / totalRequired) * 100) : 0;
   
   const hasPantryItems = pantryIngredients && pantryIngredients.length > 0;
+
+    // Render match progress element if pantry is not empty
+  let matchBadgeHtml = '';
+  if (hasPantryItems) {
+    const isReady = matchedCount === totalRequired;
+    const progressColor = isReady ? 'var(--success)' : 'var(--accent)';
