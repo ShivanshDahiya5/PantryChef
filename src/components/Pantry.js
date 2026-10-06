@@ -173,3 +173,10 @@ export function initPantry(container) {
     // 1. Render tags
     const { pantryIngredients, activeFilters } = state;
     if (pantryIngredients.length === 0) {
+tagsContainer.innerHTML = `<span class="pantry-empty">Your pantry is empty</span>`;
+      clearBtn.style.display = 'none';
+    } else {
+      tagsContainer.innerHTML = pantryIngredients
+        .map(ing => `
+          <span class="ingredient-tag">
+            ${ing}
