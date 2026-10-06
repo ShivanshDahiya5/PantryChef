@@ -180,3 +180,16 @@ tagsContainer.innerHTML = `<span class="pantry-empty">Your pantry is empty</span
         .map(ing => `
           <span class="ingredient-tag">
             ${ing}
+            <button data-ingredient="${ing}">&times;</button>
+          </span>
+        `)
+        .join('');
+      clearBtn.style.display = 'inline-block';
+
+      // Add delete listeners to tags
+      tagsContainer.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          store.removePantryIngredient(btn.dataset.ingredient);
+        });
+      });
+    }
