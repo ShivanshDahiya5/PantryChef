@@ -32,3 +32,13 @@ const progressText = isReady
       </div>
     `;
   }
+
+    // Set card contents
+  const cardElement = document.createElement('div');
+  cardElement.className = 'recipe-card';
+  cardElement.dataset.id = recipe.id;
+
+  // Star rating rendering helper
+  const renderStars = (rating) => {
+    return `★ ${rating.toFixed(1)}`;
+  };
