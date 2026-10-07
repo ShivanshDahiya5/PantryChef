@@ -89,3 +89,10 @@ export function initRecipeCreator(modalOverlay) {
             <select id="recipe-category" class="form-select" required>
               <option value="Breakfast">Breakfast</option>
               <option value="Lunch">Lunch</option>
+              <option value="Dinner" selected>Dinner</option>
+              <option value="Dessert">Dessert</option>
+              <option value="Snack">Snack</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="recipe-difficulty">Cooking Difficulty</label>
