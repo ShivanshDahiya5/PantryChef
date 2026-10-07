@@ -48,3 +48,17 @@ function parseIngredientsText(text) {
         const qty = fallbackMatch[1] ? parseFloat(fallbackMatch[1]) : 1;
         const name = fallbackMatch[2] ? fallbackMatch[2].trim().toLowerCase() : line.toLowerCase();
         return {
+            name: name,
+          quantity: isNaN(qty) ? 1 : qty,
+          unit: 'pieces'
+        };
+      }
+      
+      return {
+        name: line.toLowerCase(),
+        quantity: 1,
+        unit: 'pieces'
+      };
+    })
+    .filter(Boolean);
+}
