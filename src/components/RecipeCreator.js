@@ -115,3 +115,11 @@ export function initRecipeCreator(modalOverlay) {
             <input type="number" id="recipe-prep" class="form-input" min="0" value="10" required />
           </div>
           <div class="form-group">
+          <label for="recipe-cook">Cook Time (mins)</label>
+            <input type="number" id="recipe-cook" class="form-input" min="0" value="15" required />
+          </div>
+          <div class="form-group" style="grid-column: span 2;">
+            <label for="recipe-servings">Default Servings</label>
+            <input type="number" id="recipe-servings" class="form-input" min="1" value="2" required />
+          </div>
+        </div>
