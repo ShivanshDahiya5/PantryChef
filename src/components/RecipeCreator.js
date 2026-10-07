@@ -25,3 +25,12 @@ function parseIngredientsText(text) {
             if (parts.length === 2) {
               const whole = parseFloat(parts[0]);
               const fracParts = parts[1].split('/');
+              quantity = whole + (parseFloat(fracParts[0]) / parseFloat(fracParts[1]));
+            } else {
+              const fracParts = parts[0].split('/');
+              quantity = parseFloat(fracParts[0]) / parseFloat(fracParts[1]);
+            }
+          } else {
+            quantity = parseFloat(qtyStr);
+          }
+        }
