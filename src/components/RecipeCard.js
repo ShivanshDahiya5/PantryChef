@@ -1,29 +1,29 @@
 import { isIngredientMatched } from '../store.js';
 
 export function createRecipeCard(recipe, pantryIngredients, onCardClick, onDeleteClick) {
-    const isCustom = recipe.id.startsWith('custom-');
+  const isCustom = recipe.id.startsWith('custom-');
 
-    // Calculate ingredient match details
-    const requiredIngredients = recipe.ingredients.filter(i => !i.optional);
-    const matchedCount = requiredIngredients.filter(i =>
-        isIngredientMatched(i.name, pantryIngredients)
-    ).length;
+  // Calculate ingredient match details
+  const requiredIngredients = recipe.ingredients.filter(i => !i.optional);
+  const matchedCount = requiredIngredients.filter(i =>
+    isIngredientMatched(i.name, pantryIngredients)
+  ).length;
 
-    const totalRequired = requiredIngredients.length;
-    const matchPercentage = totalRequired > 0 ? Math.round((matchedCount / totalRequired) * 100) : 0;
+  const totalRequired = requiredIngredients.length;
+  const matchPercentage = totalRequired > 0 ? Math.round((matchedCount / totalRequired) * 100) : 0;
 
-    const hasPantryItems = pantryIngredients && pantryIngredients.length > 0;
+  const hasPantryItems = pantryIngredients && pantryIngredients.length > 0;
 
-    // Render match progress element if pantry is not empty
-    let matchBadgeHtml = '';
-    if (hasPantryItems) {
-        const isReady = matchedCount === totalRequired;
-        const progressColor = isReady ? 'var(--success)' : 'var(--accent)';
-        const progressText = isReady
-            ? 'Ready to cook!'
-            : `${matchedCount}/${totalRequired} ingredients`;
+  // Render match progress element if pantry is not empty
+  let matchBadgeHtml = '';
+  if (hasPantryItems) {
+    const isReady = matchedCount === totalRequired;
+    const progressColor = isReady ? 'var(--success)' : 'var(--accent)';
+    const progressText = isReady
+      ? 'Ready to cook!'
+      : `${matchedCount}/${totalRequired} ingredients`;
 
-        matchBadgeHtml = `
+    matchBadgeHtml = `
       <div class="recipe-match-indicator">
         <span>${progressText}</span>
         <div class="recipe-match-progress-bar">
@@ -31,19 +31,19 @@ export function createRecipeCard(recipe, pantryIngredients, onCardClick, onDelet
         </div>
       </div>
     `;
-    }
+  }
 
-    // Set card contents
-    const cardElement = document.createElement('div');
-    cardElement.className = 'recipe-card';
-    cardElement.dataset.id = recipe.id;
+  // Set card contents
+  const cardElement = document.createElement('div');
+  cardElement.className = 'recipe-card';
+  cardElement.dataset.id = recipe.id;
 
-    // Star rating rendering helper
-    const renderStars = (rating) => {
-        return `★ ${rating.toFixed(1)}`;
-    };
+  // Star rating rendering helper
+  const renderStars = (rating) => {
+    return `★ ${rating.toFixed(1)}`;
+  };
 
-    cardElement.innerHTML = `
+  cardElement.innerHTML = `
     <div class="recipe-card-img-wrapper">
       <img src="${recipe.image}" alt="${recipe.name}" class="recipe-card-img" onerror="this.src='https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&auto=format&fit=crop&q=60'"/>
     <span class="recipe-card-category">${recipe.category}</span>
@@ -65,16 +65,16 @@ export function createRecipeCard(recipe, pantryIngredients, onCardClick, onDelet
     </div>
   `;
 
-    // Prevent card click when clicking the delete button
-    cardElement.addEventListener('click', (e) => {
-        const isDelete = e.target.closest('[data-action="delete"]');
-        if (isDelete) {
-            e.stopPropagation();
-            onDeleteClick(recipe.id);
-        } else {
-            onCardClick(recipe);
-        }
-    });
+  // Prevent card click when clicking the delete button
+  cardElement.addEventListener('click', (e) => {
+    const isDelete = e.target.closest('[data-action="delete"]');
+    if (isDelete) {
+      e.stopPropagation();
+      onDeleteClick(recipe.id);
+    } else {
+      onCardClick(recipe);
+    }
+  });
 
-    return cardElement;
+  return cardElement;
 }
