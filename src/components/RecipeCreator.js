@@ -62,3 +62,11 @@ function parseIngredientsText(text) {
     })
     .filter(Boolean);
 }
+
+// Parse instructions lines
+function parseInstructionsText(text) {
+  if (!text) return [];
+  return text.split('\n')
+    .map(line => line.trim())
+    .filter(line => line.length > 0);
+}
