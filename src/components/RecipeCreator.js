@@ -34,3 +34,10 @@ function parseIngredientsText(text) {
             quantity = parseFloat(qtyStr);
           }
         }
+
+        return {
+          name: name,
+          quantity: isNaN(quantity) ? 1 : quantity,
+          unit: unit || 'pieces'
+        };
+      }
