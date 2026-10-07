@@ -41,3 +41,10 @@ function parseIngredientsText(text) {
           unit: unit || 'pieces'
         };
       }
+
+      // Fallback: If line doesn't match normal format, check if it starts with a plain number
+      const fallbackMatch = line.match(/^(\d+)?\s*(.*)$/);
+      if (fallbackMatch) {
+        const qty = fallbackMatch[1] ? parseFloat(fallbackMatch[1]) : 1;
+        const name = fallbackMatch[2] ? fallbackMatch[2].trim().toLowerCase() : line.toLowerCase();
+        return {
