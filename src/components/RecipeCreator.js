@@ -77,3 +77,8 @@ export function initRecipeCreator(modalOverlay) {
       <button class="modal-close" title="Close modal">&times;</button>
       <form id="creator-form" class="creator-form">
         <h2 class="form-title">Create Custom Recipe</h2>
+
+        <div class="form-group">
+          <label for="recipe-name">Recipe Title</label>
+          <input type="text" id="recipe-name" class="form-input" placeholder="e.g. Grandma's Famous Lasagna" required />
+        </div>
