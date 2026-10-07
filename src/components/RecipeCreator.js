@@ -82,3 +82,10 @@ export function initRecipeCreator(modalOverlay) {
           <label for="recipe-name">Recipe Title</label>
           <input type="text" id="recipe-name" class="form-input" placeholder="e.g. Grandma's Famous Lasagna" required />
         </div>
+
+        <div class="form-row-grid">
+          <div class="form-group">
+            <label for="recipe-category">Meal Category</label>
+            <select id="recipe-category" class="form-select" required>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch">Lunch</option>
