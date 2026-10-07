@@ -16,3 +16,12 @@ function parseIngredientsText(text) {
         let qtyStr = match[1] ? match[1].trim() : '1';
         let unit = match[2] ? match[2].trim().toLowerCase() : '';
         let name = match[3] ? match[3].trim().toLowerCase() : '';
+
+        // Parse fraction to float
+        let quantity = 1;
+        if (qtyStr) {
+          if (qtyStr.includes('/')) {
+            const parts = qtyStr.split(/\s+/);
+            if (parts.length === 2) {
+              const whole = parseFloat(parts[0]);
+              const fracParts = parts[1].split('/');
