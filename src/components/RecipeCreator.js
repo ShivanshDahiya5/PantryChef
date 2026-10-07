@@ -103,3 +103,8 @@ export function initRecipeCreator(modalOverlay) {
             </select>
           </div>
         </div>
+
+        <div class="form-group">
+          <label for="recipe-desc">Short Description</label>
+          <textarea id="recipe-desc" class="form-textarea" placeholder="Describe your delicious creation..." required></textarea>
+        </div>
