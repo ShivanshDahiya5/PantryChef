@@ -70,3 +70,10 @@ function parseInstructionsText(text) {
     .map(line => line.trim())
     .filter(line => line.length > 0);
 }
+
+export function initRecipeCreator(modalOverlay) {
+  modalOverlay.innerHTML = `
+    <div class="modal-container">
+      <button class="modal-close" title="Close modal">&times;</button>
+      <form id="creator-form" class="creator-form">
+        <h2 class="form-title">Create Custom Recipe</h2>
