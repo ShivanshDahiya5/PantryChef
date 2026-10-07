@@ -96,3 +96,10 @@ export function initRecipeCreator(modalOverlay) {
           </div>
           <div class="form-group">
             <label for="recipe-difficulty">Cooking Difficulty</label>
+            <select id="recipe-difficulty" class="form-select" required>
+              <option value="Easy" selected>Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </div>
+        </div>
