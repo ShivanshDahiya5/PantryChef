@@ -108,3 +108,10 @@ export function initRecipeCreator(modalOverlay) {
           <label for="recipe-desc">Short Description</label>
           <textarea id="recipe-desc" class="form-textarea" placeholder="Describe your delicious creation..." required></textarea>
         </div>
+
+        <div class="form-row-grid">
+          <div class="form-group">
+            <label for="recipe-prep">Prep Time (mins)</label>
+            <input type="number" id="recipe-prep" class="form-input" min="0" value="10" required />
+          </div>
+          <div class="form-group">
