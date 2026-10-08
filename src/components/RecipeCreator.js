@@ -230,3 +230,11 @@ if (e.target === modalOverlay || e.target.closest('.modal-close') || e.target ==
       category,
       difficulty,
       description,
+prepTime,
+      cookTime,
+      servings,
+      tags: checkedDiets,
+      ingredients,
+      instructions,
+      image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=60' // default beautiful salad plate
+    };
