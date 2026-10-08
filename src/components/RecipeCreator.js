@@ -151,3 +151,9 @@ export function initRecipeCreator(modalOverlay) {
             </label>
           </div>
         </div>
+
+        <div class="form-group">
+          <label for="recipe-ingredients">Ingredients (One per line)</label>
+          <span class="mode-desc" style="margin-bottom: 4px;">Format: [quantity] [unit] [ingredient name]. Example:<br/>1.5 cups flour<br/>2 cloves garlic<br/>3 slices bread</span>
+          <textarea id="recipe-ingredients" class="form-textarea" placeholder="1.5 cups flour&#10;2 cloves garlic" required></textarea>
+        </div>
