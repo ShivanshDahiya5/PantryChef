@@ -202,3 +202,11 @@ if (e.target === modalOverlay || e.target.closest('.modal-close') || e.target ==
     const prepTime = parseInt(form.querySelector('#recipe-prep').value);
     const cookTime = parseInt(form.querySelector('#recipe-cook').value);
     const servings = parseInt(form.querySelector('#recipe-servings').value);
+
+        // Get selected diets
+    const checkedDiets = [];
+    form.querySelectorAll('input[name="diet-tag"]:checked').forEach(chk => {
+      checkedDiets.push(chk.value);
+    });
+
+    const ingredientsText = form.querySelector('#recipe-ingredients').value;
