@@ -171,3 +171,12 @@ export function initRecipeCreator(modalOverlay) {
       </form>
     </div>
   `;
+
+    const form = modalOverlay.querySelector('#creator-form');
+  const cancelBtn = modalOverlay.querySelector('#creator-cancel');
+
+  const openCreator = () => {
+    form.reset();
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
