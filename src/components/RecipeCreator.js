@@ -210,3 +210,9 @@ if (e.target === modalOverlay || e.target.closest('.modal-close') || e.target ==
     });
 
     const ingredientsText = form.querySelector('#recipe-ingredients').value;
+    const instructionsText = form.querySelector('#recipe-instructions').value;
+
+    const ingredients = parseIngredientsText(ingredientsText);
+    const instructions = parseInstructionsText(instructionsText);
+
+    if (ingredients.length === 0) {
