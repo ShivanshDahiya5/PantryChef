@@ -194,3 +194,7 @@ if (e.target === modalOverlay || e.target.closest('.modal-close') || e.target ==
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const name = form.querySelector('#recipe-name').value;
+    const category = form.querySelector('#recipe-category').value;
+    const difficulty = form.querySelector('#recipe-difficulty').value;
