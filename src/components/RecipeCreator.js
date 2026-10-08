@@ -180,3 +180,10 @@ export function initRecipeCreator(modalOverlay) {
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   };
+
+    const closeCreator = () => {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  modalOverlay.addEventListener('click', (e) => {
