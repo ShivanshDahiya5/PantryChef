@@ -134,3 +134,8 @@ export function initRecipeCreator(modalOverlay) {
             </label>
             <label class="mode-option" style="margin-bottom: 0; margin-left: 16px;">
               <input type="checkbox" name="diet-tag" value="Vegan" style="accent-color: var(--primary);">
+              <span class="mode-name" style="font-size: 13px;">Vegan</span>
+            </label>
+            <label class="mode-option" style="margin-bottom: 0; margin-left: 16px;">
+              <input type="checkbox" name="diet-tag" value="Vegetarian" style="accent-color: var(--primary);">
+              <span class="mode-name" style="font-size: 13px;">Vegetarian</span>
