@@ -224,3 +224,9 @@ if (e.target === modalOverlay || e.target.closest('.modal-close') || e.target ==
       alert('Please specify at least one cooking step.');
       return;
     }
+
+        const customRecipe = {
+      name,
+      category,
+      difficulty,
+      description,
