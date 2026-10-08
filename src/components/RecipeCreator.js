@@ -163,3 +163,11 @@ export function initRecipeCreator(modalOverlay) {
           <span class="mode-desc" style="margin-bottom: 4px;">Format: Write the instruction text for each step on a new line.</span>
           <textarea id="recipe-instructions" class="form-textarea" placeholder="Preheat oven to 350F&#10;Mix dry ingredients together" required></textarea>
         </div>
+
+        <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 12px;">
+          <button type="button" class="btn btn-secondary" id="creator-cancel">Cancel</button>
+          <button type="submit" class="btn btn-accent">Save Recipe</button>
+        </div>
+      </form>
+    </div>
+  `;
