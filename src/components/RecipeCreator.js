@@ -187,3 +187,10 @@ export function initRecipeCreator(modalOverlay) {
   };
 
   modalOverlay.addEventListener('click', (e) => {
+if (e.target === modalOverlay || e.target.closest('.modal-close') || e.target === cancelBtn) {
+      closeCreator();
+    }
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
