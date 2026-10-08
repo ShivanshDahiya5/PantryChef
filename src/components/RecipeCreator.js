@@ -129,3 +129,8 @@ export function initRecipeCreator(modalOverlay) {
           <label>Dietary Requirement Tags</label>
           <div class="dietary-filters" style="margin-top: 4px;">
             <label class="mode-option" style="margin-bottom: 0;">
+            <input type="checkbox" name="diet-tag" value="Gluten-Free" style="accent-color: var(--primary);">
+              <span class="mode-name" style="font-size: 13px;">Gluten-Free</span>
+            </label>
+            <label class="mode-option" style="margin-bottom: 0; margin-left: 16px;">
+              <input type="checkbox" name="diet-tag" value="Vegan" style="accent-color: var(--primary);">
