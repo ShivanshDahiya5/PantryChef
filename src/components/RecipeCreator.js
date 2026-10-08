@@ -198,3 +198,7 @@ if (e.target === modalOverlay || e.target.closest('.modal-close') || e.target ==
     const name = form.querySelector('#recipe-name').value;
     const category = form.querySelector('#recipe-category').value;
     const difficulty = form.querySelector('#recipe-difficulty').value;
+    const description = form.querySelector('#recipe-desc').value;
+    const prepTime = parseInt(form.querySelector('#recipe-prep').value);
+    const cookTime = parseInt(form.querySelector('#recipe-cook').value);
+    const servings = parseInt(form.querySelector('#recipe-servings').value);
