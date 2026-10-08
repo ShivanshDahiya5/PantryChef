@@ -216,3 +216,11 @@ if (e.target === modalOverlay || e.target.closest('.modal-close') || e.target ==
     const instructions = parseInstructionsText(instructionsText);
 
     if (ingredients.length === 0) {
+      alert('Please specify at least one ingredient.');
+      return;
+    }
+
+    if (instructions.length === 0) {
+      alert('Please specify at least one cooking step.');
+      return;
+    }
