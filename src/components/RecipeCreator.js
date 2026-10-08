@@ -123,3 +123,9 @@ export function initRecipeCreator(modalOverlay) {
             <input type="number" id="recipe-servings" class="form-input" min="1" value="2" required />
           </div>
         </div>
+
+        <!-- Dietary Checkboxes -->
+        <div class="form-group">
+          <label>Dietary Requirement Tags</label>
+          <div class="dietary-filters" style="margin-top: 4px;">
+            <label class="mode-option" style="margin-bottom: 0;">
