@@ -62,3 +62,10 @@ export function initRecipeDetail(modalContainer) {
 
     // Renders ingredients list with highlighting
     const ingredientsHtml = currentRecipe.ingredients
+    .map(ing => {
+        const isMatched = isIngredientMatched(ing.name, pantryIngredients);
+        const scaledQty = ing.quantity ? ing.quantity * scaleFactor : null;
+        
+        return `
+          <li class="ingredient-item ${isMatched ? 'owned' : 'missing'}">
+            <input type="checkbox" class="ingredient-item-checkbox" ${isMatched ? 'checked' : ''} disabled />
