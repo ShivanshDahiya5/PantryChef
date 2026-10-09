@@ -38,3 +38,10 @@ export function initRecipeDetail(modalContainer) {
   `;
 
   const contentWrapper = modalContainer.querySelector('#modal-content-wrapper');
+
+  // Close modal logic
+  const closeModal = () => {
+    modalContainer.classList.remove('active');
+    currentRecipe = null;
+    document.body.style.overflow = ''; // Restore scroll
+  };
