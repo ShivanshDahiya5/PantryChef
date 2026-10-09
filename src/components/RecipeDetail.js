@@ -69,3 +69,13 @@ export function initRecipeDetail(modalContainer) {
         return `
           <li class="ingredient-item ${isMatched ? 'owned' : 'missing'}">
             <input type="checkbox" class="ingredient-item-checkbox" ${isMatched ? 'checked' : ''} disabled />
+            <span>
+              ${scaledQty ? `<span class="ingredient-quantity">${formatQuantity(scaledQty)}</span>` : ''}
+              <span class="ingredient-unit">${ing.unit || ''}</span>
+              <span class="ingredient-name">${ing.name}</span>
+              ${ing.optional ? '<span class="text-light" style="font-size: 11px;">(optional)</span>' : ''}
+            </span>
+          </li>
+        `;
+      })
+      .join('');
