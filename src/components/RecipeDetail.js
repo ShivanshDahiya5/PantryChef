@@ -18,3 +18,9 @@ else if (Math.abs(frac - 0.67) < 0.05) fracText = '2/3';
     // If it's a decimal, trim trailing zeros
     fracText = frac.toFixed(2).replace(/\.?0+$/, '').substring(1);
   }
+
+  if (whole > 0) {
+    return fracText ? `${whole}${fracText.startsWith('.') ? fracText : ' ' + fracText}` : `${whole}`;
+  }
+  return fracText || `${val}`;
+}
