@@ -45,3 +45,10 @@ export function initRecipeDetail(modalContainer) {
     currentRecipe = null;
     document.body.style.overflow = ''; // Restore scroll
   };
+
+  modalContainer.addEventListener('click', (e) => {
+    // Close on clicking the background overlay or close button
+    if (e.target === modalContainer || e.target.closest('.modal-close')) {
+      closeModal();
+    }
+  });
