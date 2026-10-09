@@ -79,3 +79,10 @@ export function initRecipeDetail(modalContainer) {
         `;
       })
       .join('');
+
+      // Renders interactive cooking steps
+    const stepsHtml = currentRecipe.instructions
+      .map((step, index) => `
+        <li class="step-item" data-step="${index}">
+          <div class="step-checkbox-wrapper">
+            <input type="checkbox" class="step-checkbox" id="step-chk-${index}" />
