@@ -86,3 +86,11 @@ export function initRecipeDetail(modalContainer) {
         <li class="step-item" data-step="${index}">
           <div class="step-checkbox-wrapper">
             <input type="checkbox" class="step-checkbox" id="step-chk-${index}" />
+            </div>
+          <div class="step-content">
+            <span class="step-number">Step ${index + 1}</span>
+            <span class="step-text">${step}</span>
+          </div>
+        </li>
+      `)
+      .join('');
