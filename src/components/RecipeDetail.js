@@ -31,3 +31,10 @@ export function initRecipeDetail(modalContainer) {
 
   // Render modal structure shell
   modalContainer.innerHTML = `
+
+  <div class="modal-container" id="modal-content-wrapper">
+      <!-- Content loaded dynamically -->
+    </div>
+  `;
+
+  const contentWrapper = modalContainer.querySelector('#modal-content-wrapper');
