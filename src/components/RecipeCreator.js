@@ -238,3 +238,10 @@ prepTime,
       instructions,
       image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=60' // default beautiful salad plate
     };
+
+        store.addCustomRecipe(customRecipe);
+    closeCreator();
+  });
+
+  return { openCreator, closeCreator };
+}
