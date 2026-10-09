@@ -98,4 +98,10 @@ export function initRecipeDetail(modalContainer) {
       contentWrapper.innerHTML = `
       <button class="modal-close" title="Close modal">&times;</button>
       <div class="modal-hero">
-        <img src="${currentRecipe.image}" alt="${currentRecipe.name}" class="modal-hero-img" onerror="this.src='https://images.unsplash.com/
+        <img src="${currentRecipe.image}" alt="${currentRecipe.name}" class="modal-hero-img" onerror="this.src='https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&auto=format&fit=crop&q=60'"/>
+        <div class="modal-hero-overlay"></div>
+        <div class="modal-hero-content">
+          <span class="modal-category">${currentRecipe.category}</span>
+          <h2 class="modal-title">${currentRecipe.name}</h2>
+        </div>
+      </div>
