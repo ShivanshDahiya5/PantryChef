@@ -24,3 +24,10 @@ else if (Math.abs(frac - 0.67) < 0.05) fracText = '2/3';
   }
   return fracText || `${val}`;
 }
+
+export function initRecipeDetail(modalContainer) {
+  let currentRecipe = null;
+  let currentServings = 2;
+
+  // Render modal structure shell
+  modalContainer.innerHTML = `
