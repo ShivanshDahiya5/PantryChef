@@ -11,7 +11,7 @@ function parseIngredientsText(text) {
       // Matches: quantity (decimals, fractions e.g. "1 1/2" or "0.75"), unit (e.g. "cups", "cloves"), and name (e.g. "olive oil")
       const regexPattern = /^(\d+(?:\s+\d+\/\d+|\/\d+|\.\d+|\.\d+)?)\s*(cups?|tbsps?|tsps?|cloves?|slices?|pieces?|wholes?|ozs?|lbs?|grams?|g|ml|cans?|bags?)?\s+(.*)$/i;
       const match = line.match(regexPattern);
-      
+
       if (match) {
         let qtyStr = match[1] ? match[1].trim() : '1';
         let unit = match[2] ? match[2].trim().toLowerCase() : '';
@@ -48,12 +48,12 @@ function parseIngredientsText(text) {
         const qty = fallbackMatch[1] ? parseFloat(fallbackMatch[1]) : 1;
         const name = fallbackMatch[2] ? fallbackMatch[2].trim().toLowerCase() : line.toLowerCase();
         return {
-            name: name,
+          name: name,
           quantity: isNaN(qty) ? 1 : qty,
           unit: 'pieces'
         };
       }
-      
+
       return {
         name: line.toLowerCase(),
         quantity: 1,
@@ -172,7 +172,7 @@ export function initRecipeCreator(modalOverlay) {
     </div>
   `;
 
-    const form = modalOverlay.querySelector('#creator-form');
+  const form = modalOverlay.querySelector('#creator-form');
   const cancelBtn = modalOverlay.querySelector('#creator-cancel');
 
   const openCreator = () => {
@@ -181,13 +181,13 @@ export function initRecipeCreator(modalOverlay) {
     document.body.style.overflow = 'hidden';
   };
 
-    const closeCreator = () => {
+  const closeCreator = () => {
     modalOverlay.classList.remove('active');
     document.body.style.overflow = '';
   };
 
   modalOverlay.addEventListener('click', (e) => {
-if (e.target === modalOverlay || e.target.closest('.modal-close') || e.target === cancelBtn) {
+    if (e.target === modalOverlay || e.target.closest('.modal-close') || e.target === cancelBtn) {
       closeCreator();
     }
   });
@@ -203,7 +203,7 @@ if (e.target === modalOverlay || e.target.closest('.modal-close') || e.target ==
     const cookTime = parseInt(form.querySelector('#recipe-cook').value);
     const servings = parseInt(form.querySelector('#recipe-servings').value);
 
-        // Get selected diets
+    // Get selected diets
     const checkedDiets = [];
     form.querySelectorAll('input[name="diet-tag"]:checked').forEach(chk => {
       checkedDiets.push(chk.value);
@@ -225,12 +225,12 @@ if (e.target === modalOverlay || e.target.closest('.modal-close') || e.target ==
       return;
     }
 
-        const customRecipe = {
+    const customRecipe = {
       name,
       category,
       difficulty,
       description,
-prepTime,
+      prepTime,
       cookTime,
       servings,
       tags: checkedDiets,
@@ -239,7 +239,7 @@ prepTime,
       image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=60' // default beautiful salad plate
     };
 
-        store.addCustomRecipe(customRecipe);
+    store.addCustomRecipe(customRecipe);
     closeCreator();
   });
 
