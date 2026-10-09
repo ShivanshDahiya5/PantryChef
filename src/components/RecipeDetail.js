@@ -94,3 +94,8 @@ export function initRecipeDetail(modalContainer) {
         </li>
       `)
       .join('');
+
+      contentWrapper.innerHTML = `
+      <button class="modal-close" title="Close modal">&times;</button>
+      <div class="modal-hero">
+        <img src="${currentRecipe.image}" alt="${currentRecipe.name}" class="modal-hero-img" onerror="this.src='https://images.unsplash.com/
