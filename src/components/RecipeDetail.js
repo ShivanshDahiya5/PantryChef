@@ -52,3 +52,13 @@ export function initRecipeDetail(modalContainer) {
       closeModal();
     }
   });
+
+   // Dynamic content renderer
+  const renderRecipeDetails = () => {
+    if (!currentRecipe) return;
+
+    const scaleFactor = currentServings / currentRecipe.servings;
+    const pantryIngredients = store.getState().pantryIngredients;
+
+    // Renders ingredients list with highlighting
+    const ingredientsHtml = currentRecipe.ingredients
