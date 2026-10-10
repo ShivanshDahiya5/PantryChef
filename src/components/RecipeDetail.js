@@ -205,3 +205,8 @@ export function initRecipeDetail(modalContainer) {
       });
     });
   };
+
+    // Open recipe runner
+  const openRecipe = (recipe) => {
+    currentRecipe = recipe;
+    currentServings = recipe.servings;
