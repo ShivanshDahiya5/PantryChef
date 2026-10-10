@@ -105,3 +105,10 @@ export function initRecipeDetail(modalContainer) {
           <h2 class="modal-title">${currentRecipe.name}</h2>
         </div>
       </div>
+
+      <div class="modal-body">
+        <p class="modal-desc">${currentRecipe.description}</p>
+        
+        <div class="modal-quick-info">
+          <div class="quick-info-item">
+            <span class="quick-info-label">Prep Time</span>
