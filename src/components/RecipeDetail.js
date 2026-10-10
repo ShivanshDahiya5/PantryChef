@@ -123,3 +123,12 @@ export function initRecipeDetail(modalContainer) {
             <span class="quick-info-value">${currentRecipe.difficulty}</span>
           </div>
           <div class="quick-info-item">
+          <span class="quick-info-label">Rating</span>
+            <span class="quick-info-value">★ ${currentRecipe.rating.toFixed(1)}</span>
+          </div>
+        </div>
+
+        <div class="modal-content-split">
+          <!-- Left Column: Ingredients -->
+          <div>
+            <h3 class="modal-section-title">Ingredients</h3>
