@@ -183,3 +183,13 @@ export function initRecipeDetail(modalContainer) {
       
       // Toggle checked when clicking anywhere on the step card
       item.addEventListener('click', (e) => {
+        if (e.target !== chk) {
+          chk.checked = !chk.checked;
+        }
+        
+        if (chk.checked) {
+          item.classList.add('completed');
+        } else {
+          item.classList.remove('completed');
+        }
+      });
