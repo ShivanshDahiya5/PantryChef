@@ -164,3 +164,14 @@ export function initRecipeDetail(modalContainer) {
 
     decBtn.addEventListener('click', () => {
       if (currentServings > 1) {
+        currentServings--;
+        renderRecipeDetails();
+      }
+    });
+
+    incBtn.addEventListener('click', () => {
+      if (currentServings < 20) {
+        currentServings++;
+        renderRecipeDetails();
+      }
+    });
