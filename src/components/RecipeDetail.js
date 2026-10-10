@@ -211,7 +211,7 @@ export function initRecipeDetail(modalContainer) {
     currentRecipe = recipe;
     currentServings = recipe.servings;
 modalContainer.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Stop body scrolling
+    document.body.style.overflow = 'hidden';
     renderRecipeDetails();
   };
 
