@@ -132,3 +132,8 @@ export function initRecipeDetail(modalContainer) {
           <!-- Left Column: Ingredients -->
           <div>
             <h3 class="modal-section-title">Ingredients</h3>
+
+            <div class="servings-control">
+              <span class="servings-label">Servings:</span>
+              <div class="servings-buttons">
+                <button class="servings-btn" id="servings-dec">-</button>
