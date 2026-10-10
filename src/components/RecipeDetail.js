@@ -7,12 +7,12 @@ function formatQuantity(num) {
   const whole = Math.floor(val);
   const frac = val - whole;
 
-    let fracText = '';
+  let fracText = '';
   if (Math.abs(frac - 0.25) < 0.05) fracText = '1/4';
   else if (Math.abs(frac - 0.5) < 0.05) fracText = '1/2';
   else if (Math.abs(frac - 0.75) < 0.05) fracText = '3/4';
   else if (Math.abs(frac - 0.33) < 0.05) fracText = '1/3';
-else if (Math.abs(frac - 0.67) < 0.05) fracText = '2/3';
+  else if (Math.abs(frac - 0.67) < 0.05) fracText = '2/3';
   else if (Math.abs(frac - 0.125) < 0.03) fracText = '1/8';
   else if (frac > 0) {
     // If it's a decimal, trim trailing zeros
@@ -53,7 +53,7 @@ export function initRecipeDetail(modalContainer) {
     }
   });
 
-   // Dynamic content renderer
+  // Dynamic content renderer
   const renderRecipeDetails = () => {
     if (!currentRecipe) return;
 
@@ -62,10 +62,10 @@ export function initRecipeDetail(modalContainer) {
 
     // Renders ingredients list with highlighting
     const ingredientsHtml = currentRecipe.ingredients
-    .map(ing => {
+      .map(ing => {
         const isMatched = isIngredientMatched(ing.name, pantryIngredients);
         const scaledQty = ing.quantity ? ing.quantity * scaleFactor : null;
-        
+
         return `
           <li class="ingredient-item ${isMatched ? 'owned' : 'missing'}">
             <input type="checkbox" class="ingredient-item-checkbox" ${isMatched ? 'checked' : ''} disabled />
@@ -80,7 +80,7 @@ export function initRecipeDetail(modalContainer) {
       })
       .join('');
 
-      // Renders interactive cooking steps
+    // Renders interactive cooking steps
     const stepsHtml = currentRecipe.instructions
       .map((step, index) => `
         <li class="step-item" data-step="${index}">
@@ -95,7 +95,7 @@ export function initRecipeDetail(modalContainer) {
       `)
       .join('');
 
-      contentWrapper.innerHTML = `
+    contentWrapper.innerHTML = `
       <button class="modal-close" title="Close modal">&times;</button>
       <div class="modal-hero">
         <img src="${currentRecipe.image}" alt="${currentRecipe.name}" class="modal-hero-img" onerror="this.src='https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&auto=format&fit=crop&q=60'"/>
@@ -180,13 +180,13 @@ export function initRecipeDetail(modalContainer) {
     const stepItems = contentWrapper.querySelectorAll('.step-item');
     stepItems.forEach(item => {
       const chk = item.querySelector('.step-checkbox');
-      
+
       // Toggle checked when clicking anywhere on the step card
       item.addEventListener('click', (e) => {
         if (e.target !== chk) {
           chk.checked = !chk.checked;
         }
-        
+
         if (chk.checked) {
           item.classList.add('completed');
         } else {
@@ -206,11 +206,11 @@ export function initRecipeDetail(modalContainer) {
     });
   };
 
-    // Open recipe runner
+  // Open recipe runner
   const openRecipe = (recipe) => {
     currentRecipe = recipe;
     currentServings = recipe.servings;
-modalContainer.classList.add('active');
+    modalContainer.classList.add('active');
     document.body.style.overflow = 'hidden';
     renderRecipeDetails();
   };
