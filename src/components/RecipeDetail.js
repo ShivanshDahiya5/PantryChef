@@ -193,3 +193,15 @@ export function initRecipeDetail(modalContainer) {
           item.classList.remove('completed');
         }
       });
+
+      // Stop propagation if clicking the checkbox directly to prevent double-toggling
+      chk.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (chk.checked) {
+          item.classList.add('completed');
+        } else {
+          item.classList.remove('completed');
+        }
+      });
+    });
+  };
