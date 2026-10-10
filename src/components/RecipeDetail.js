@@ -146,3 +146,14 @@ export function initRecipeDetail(modalContainer) {
               ${ingredientsHtml}
             </ul>
           </div>
+
+          <!-- Right Column: Instructions -->
+          <div>
+            <h3 class="modal-section-title">Preparation</h3>
+            <ul class="modal-steps-list">
+              ${stepsHtml}
+            </ul>
+          </div>
+        </div>
+      </div>
+    `;
