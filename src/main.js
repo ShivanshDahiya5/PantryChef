@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Empty the recipe grid
         recipesGrid.innerHTML = '';
 
-        // Fetch matching filtered & sorted recipes
         const filteredRecipes = store.getFilteredRecipes();
 
         if (filteredRecipes.length === 0) {
