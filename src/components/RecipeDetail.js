@@ -157,3 +157,10 @@ export function initRecipeDetail(modalContainer) {
         </div>
       </div>
     `;
+
+    // Hook up Servings adjustments listeners
+    const decBtn = contentWrapper.querySelector('#servings-dec');
+    const incBtn = contentWrapper.querySelector('#servings-inc');
+
+    decBtn.addEventListener('click', () => {
+      if (currentServings > 1) {
