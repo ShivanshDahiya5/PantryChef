@@ -137,3 +137,12 @@ export function initRecipeDetail(modalContainer) {
               <span class="servings-label">Servings:</span>
               <div class="servings-buttons">
                 <button class="servings-btn" id="servings-dec">-</button>
+                <span class="servings-count" id="servings-display">${currentServings}</span>
+                <button class="servings-btn" id="servings-inc">+</button>
+              </div>
+            </div>
+
+            <ul class="modal-ingredients-list">
+              ${ingredientsHtml}
+            </ul>
+          </div>
