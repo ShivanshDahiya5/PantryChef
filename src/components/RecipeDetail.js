@@ -112,3 +112,9 @@ export function initRecipeDetail(modalContainer) {
         <div class="modal-quick-info">
           <div class="quick-info-item">
             <span class="quick-info-label">Prep Time</span>
+            <span class="quick-info-value">${currentRecipe.prepTime} mins</span>
+          </div>
+          <div class="quick-info-item">
+            <span class="quick-info-label">Cook Time</span>
+            <span class="quick-info-value">${currentRecipe.cookTime} mins</span>
+          </div>
