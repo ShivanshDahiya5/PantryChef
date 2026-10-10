@@ -210,3 +210,10 @@ export function initRecipeDetail(modalContainer) {
   const openRecipe = (recipe) => {
     currentRecipe = recipe;
     currentServings = recipe.servings;
+modalContainer.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Stop body scrolling
+    renderRecipeDetails();
+  };
+
+  return { openRecipe, closeModal };
+}
