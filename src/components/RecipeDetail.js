@@ -175,3 +175,11 @@ export function initRecipeDetail(modalContainer) {
         renderRecipeDetails();
       }
     });
+
+    // Hook up Steps checklist toggle listeners
+    const stepItems = contentWrapper.querySelectorAll('.step-item');
+    stepItems.forEach(item => {
+      const chk = item.querySelector('.step-checkbox');
+      
+      // Toggle checked when clicking anywhere on the step card
+      item.addEventListener('click', (e) => {
