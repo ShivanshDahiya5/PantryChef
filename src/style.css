@@ -122,3 +122,13 @@ height: 44px;
   background-color: var(--primary-hover);
   transform: translateY(-1px);
 }
+
+.btn-secondary {
+  background-color: var(--bg-card);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--border-color);
+}
