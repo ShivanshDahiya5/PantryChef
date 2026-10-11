@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+:root {
+  --primary: #2C4A3E;       /* Deep Sage Green */
+  --primary-rgb: 44, 74, 62;
+  --primary-hover: #1F362C;
+  --secondary: #D96B43;     /* Warm Terracotta */
+  --secondary-hover: #C55E37;
+  --accent: #E29E3F;        /* Honey Ochre */
+  --accent-light: #FEF7EC;
+  --bg-main: #FDFBF7;       /* Warm Cream */
+  --bg-card: #FFFFFF;
+  --bg-input: #F3F4F6;
+  --text-main: #1F2937;
+  --text-muted: #6B7280;
