@@ -197,3 +197,15 @@ text-transform: uppercase;
   gap: 24px;
   margin-bottom: 32px;
 }
+
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.hero-image-container {
+  position: relative;
+  min-height: 300px;
+}
