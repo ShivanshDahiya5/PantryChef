@@ -50,3 +50,10 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Base Layout Container */
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px 48px 24px;
+}
