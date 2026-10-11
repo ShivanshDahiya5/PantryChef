@@ -111,3 +111,14 @@ height: 44px;
   transition: all var(--transition-fast);
   border: none;
 }
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(44, 74, 62, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
