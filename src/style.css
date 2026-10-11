@@ -67,3 +67,14 @@ body {
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 32px;
 }
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  background: var(--primary);
+  color: var(--bg-main);
+  width: 44px;
