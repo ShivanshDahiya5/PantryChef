@@ -171,3 +171,16 @@ height: 44px;
   color: var(--primary-hover);
   font-weight: 700;
   font-size: 11px;
+text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
