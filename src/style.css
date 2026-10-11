@@ -93,3 +93,21 @@ height: 44px;
   font-weight: 700;
   color: var(--primary);
 }
+
+.logo-group span {
+  color: var(--secondary);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+}
