@@ -156,3 +156,18 @@ height: 44px;
   box-shadow: var(--shadow-lg);
   position: relative;
 }
+
+.hero-content {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.hero-tag {
+  background-color: var(--accent);
+  color: var(--primary-hover);
+  font-weight: 700;
+  font-size: 11px;
