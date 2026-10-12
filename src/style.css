@@ -441,3 +441,15 @@ justify-content: center;
   font-weight: 500;
   color: var(--text-main);
 }
+
+.mode-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Main Content Section */
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
