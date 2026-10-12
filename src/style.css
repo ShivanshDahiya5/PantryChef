@@ -350,3 +350,17 @@ justify-content: center;
   color: var(--primary);
   border: 1px solid rgba(44, 74, 62, 0.1);
   padding: 6px 12px;
+ border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  animation: tagPop var(--transition-normal);
+}
+
+.ingredient-tag button {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  font-weight: bold;
