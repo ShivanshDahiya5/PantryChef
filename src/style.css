@@ -294,3 +294,14 @@ border-radius: var(--radius-md);
   height: 44px;
   display: flex;
   align-items: center;
+justify-content: center;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background var(--transition-fast);
+}
+
+.btn-icon:hover {
+  background-color: var(--primary-hover);
+}
