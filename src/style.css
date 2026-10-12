@@ -417,3 +417,16 @@ justify-content: center;
   color: var(--primary);
   margin-bottom: 12px;
 }
+
+.mode-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.mode-option input {
+  margin-top: 4px;
+  accent-color: var(--primary);
+}
