@@ -256,3 +256,18 @@ text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 20px;
 }
+
+/* Input & Autocomplete suggestions */
+.pantry-input-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.pantry-input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.pantry-input {
+  flex: 1;
+  padding: 12px 16px;
