@@ -364,3 +364,17 @@ justify-content: center;
   border: none;
   color: var(--secondary);
   font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: background var(--transition-fast);
+}
+
+.ingredient-tag button:hover {
+  background-color: rgba(217, 107, 67, 0.1);
+}
