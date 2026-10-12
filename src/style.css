@@ -224,3 +224,11 @@ text-transform: uppercase;
   bottom: 0;
   background: linear-gradient(90deg, var(--primary) 0%, rgba(44, 74, 62, 0) 50%);
 }
+
+/* Grid Layout for sidebar + content */
+.main-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 40px;
+  align-items: start;
+}
