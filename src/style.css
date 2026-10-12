@@ -335,3 +335,18 @@ justify-content: center;
   background-color: rgba(44, 74, 62, 0.05);
   color: var(--primary);
 }
+
+/* Active Ingredients Tags */
+.pantry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  min-height: 40px;
+}
+
+.ingredient-tag {
+  background-color: var(--accent-light);
+  color: var(--primary);
+  border: 1px solid rgba(44, 74, 62, 0.1);
+  padding: 6px 12px;
