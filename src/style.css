@@ -403,3 +403,17 @@ justify-content: center;
 .clear-pantry-btn:hover {
   color: var(--secondary-hover);
 }
+
+/* Matching Mode Selector */
+.pantry-modes {
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.pantry-modes h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
