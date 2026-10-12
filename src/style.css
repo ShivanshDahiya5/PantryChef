@@ -430,3 +430,14 @@ justify-content: center;
   margin-top: 4px;
   accent-color: var(--primary);
 }
+
+.mode-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.mode-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-main);
+}
