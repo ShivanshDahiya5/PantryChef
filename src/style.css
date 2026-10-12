@@ -388,3 +388,18 @@ justify-content: center;
   border-radius: var(--radius-md);
   width: 100%;
 }
+
+.clear-pantry-btn {
+  font-size: 12px;
+  color: var(--secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.clear-pantry-btn:hover {
+  color: var(--secondary-hover);
+}
