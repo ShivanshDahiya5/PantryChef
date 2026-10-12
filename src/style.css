@@ -232,3 +232,14 @@ text-transform: uppercase;
   gap: 40px;
   align-items: start;
 }
+
+/* Sidebar: Pantry */
+.pantry-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 24px;
+}
