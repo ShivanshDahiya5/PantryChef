@@ -271,3 +271,18 @@ text-transform: uppercase;
 .pantry-input {
   flex: 1;
   padding: 12px 16px;
+border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-input);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-main);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.pantry-input:focus {
+  border-color: var(--primary);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(44, 74, 62, 0.1);
+}
