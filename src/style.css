@@ -465,3 +465,15 @@ justify-content: center;
   flex-direction: column;
   gap: 20px;
 }
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
