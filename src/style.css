@@ -507,3 +507,11 @@ justify-content: center;
   padding-bottom: 4px;
   scrollbar-width: thin;
 }
+
+.category-tab {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 8px 18px;
+  border-radius: 100px;
+  font-size: 14px;
