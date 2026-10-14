@@ -548,3 +548,10 @@ justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
 }
+
+.dietary-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 6px 14px;
+  border-radius: 100px;
