@@ -555,3 +555,13 @@ justify-content: center;
   color: var(--text-muted);
   padding: 6px 14px;
   border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.dietary-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
