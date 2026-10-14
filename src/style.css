@@ -598,3 +598,11 @@ justify-content: center;
 .sort-select:focus {
   border-color: var(--primary);
 }
+
+/* Recipe Grid */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+  min-height: 300px;
+}
