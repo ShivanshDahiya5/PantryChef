@@ -587,3 +587,14 @@ justify-content: center;
   padding: 6px 12px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-color);
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-main);
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.sort-select:focus {
+  border-color: var(--primary);
+}
