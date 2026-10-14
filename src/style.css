@@ -577,3 +577,13 @@ justify-content: center;
   align-items: center;
   gap: 8px;
 }
+
+.sort-group label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.sort-select {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
