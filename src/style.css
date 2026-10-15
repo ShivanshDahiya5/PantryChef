@@ -606,3 +606,12 @@ justify-content: center;
   gap: 24px;
   min-height: 300px;
 }
+
+/* Recipe Card styling */
+.recipe-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
