@@ -672,3 +672,14 @@ justify-content: center;
   align-items: center;
   gap: 4px;
 }
+
+/* Pantry Match Indicator */
+.recipe-match-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(44, 74, 62, 0.9);
+  backdrop-filter: blur(4px);
+  color: white;
+  font-size: 12px;
