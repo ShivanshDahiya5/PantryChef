@@ -636,3 +636,11 @@ justify-content: center;
 
 .recipe-card-img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.recipe-card:hover .recipe-card-img {
+  transform: scale(1.05);
+}
