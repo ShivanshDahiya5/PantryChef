@@ -615,3 +615,15 @@ justify-content: center;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   cursor: pointer;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: fadeIn var(--transition-normal);
+}
+
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(44, 74, 62, 0.15);
+}
