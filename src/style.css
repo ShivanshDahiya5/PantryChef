@@ -683,3 +683,16 @@ justify-content: center;
   backdrop-filter: blur(4px);
   color: white;
   font-size: 12px;
+    padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipe-match-progress-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  width: 70px;
+  overflow: hidden;
+}
