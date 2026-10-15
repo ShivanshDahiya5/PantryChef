@@ -657,3 +657,18 @@ justify-content: center;
   border-radius: 100px;
   box-shadow: var(--shadow-sm);
 }
+
+.recipe-card-rating {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(44, 74, 62, 0.95);
+  color: white;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
