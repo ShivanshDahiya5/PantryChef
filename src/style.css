@@ -627,3 +627,12 @@ justify-content: center;
   box-shadow: var(--shadow-lg);
   border-color: rgba(44, 74, 62, 0.15);
 }
+
+.recipe-card-img-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.recipe-card-img {
+  width: 100%;
