@@ -771,3 +771,13 @@ justify-content: center;
 .recipe-card:hover .custom-delete-btn {
   opacity: 1;
 }
+
+/* Modal styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(8px);
