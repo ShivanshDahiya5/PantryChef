@@ -744,3 +744,15 @@ justify-content: center;
   align-items: center;
   gap: 4px;
 }
+
+/* Custom Recipe Delete Badge */
+.custom-delete-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: var(--danger);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
