@@ -738,3 +738,9 @@ justify-content: center;
   font-size: 12px;
   color: var(--text-muted);
 }
+
+.recipe-card-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
