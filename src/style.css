@@ -781,3 +781,12 @@ justify-content: center;
   bottom: 0;
   background-color: rgba(30, 41, 59, 0.4);
   backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+  padding: 24px;
+}
