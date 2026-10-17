@@ -911,3 +911,12 @@ justify-content: center;
 .quick-info-label {
   font-size: 11px;
   color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.quick-info-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+}
