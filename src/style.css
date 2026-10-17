@@ -867,3 +867,12 @@ justify-content: center;
   right: 32px;
   color: white;
 }
+
+.modal-category {
+  background-color: var(--accent);
+  color: var(--primary-hover);
+  font-weight: 700;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  display: inline-block;
