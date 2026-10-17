@@ -833,3 +833,14 @@ justify-content: center;
   font-weight: bold;
   transition: all var(--transition-fast);
 }
+
+.modal-close:hover {
+  background-color: var(--bg-input);
+  transform: scale(1.05);
+}
+
+/* Modal Recipe Detail Layout */
+.modal-hero {
+  position: relative;
+  height: 280px;
+}
