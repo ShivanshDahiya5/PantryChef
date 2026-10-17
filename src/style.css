@@ -854,3 +854,16 @@ justify-content: center;
 .modal-hero-overlay {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0) 40%, rgba(30, 41, 59, 0.7) 100%);
+}
+
+.modal-hero-content {
+  position: absolute;
+  bottom: 24px;
+  left: 32px;
+  right: 32px;
+  color: white;
+}
