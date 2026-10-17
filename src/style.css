@@ -790,3 +790,14 @@ justify-content: center;
   transition: opacity var(--transition-normal);
   padding: 24px;
 }
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container {
+  background-color: white;
+  border-radius: var(--radius-xl);
+  max-width: 800px;
+  width: 100%;
