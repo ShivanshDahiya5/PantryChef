@@ -927,3 +927,15 @@ justify-content: center;
   grid-template-columns: 1fr 1.3fr;
   gap: 40px;
 }
+
+/* Servings Control */
+.servings-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  background-color: var(--bg-main);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
