@@ -920,3 +920,10 @@ justify-content: center;
   font-weight: 600;
   color: var(--primary);
 }
+
+/* Two column layout inside Modal */
+.modal-content-split {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+}
