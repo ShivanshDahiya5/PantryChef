@@ -951,3 +951,12 @@ justify-content: center;
   align-items: center;
   gap: 8px;
 }
+
+.servings-btn {
+  background: white;
+  border: 1px solid var(--border-color);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
