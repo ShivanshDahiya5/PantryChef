@@ -1000,3 +1000,14 @@ justify-content: center;
   margin-bottom: 6px;
   font-size: 14px;
 }
+
+.ingredient-item.owned {
+  background-color: var(--success-light);
+  border-left: 3px solid var(--success);
+  color: var(--primary);
+}
+
+.ingredient-item.missing {
+  background-color: var(--danger-light);
+  border-left: 3px solid var(--danger);
+}
