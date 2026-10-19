@@ -971,3 +971,10 @@ justify-content: center;
   color: white;
   border-color: var(--primary);
 }
+
+.servings-count {
+  font-size: 15px;
+  font-weight: 700;
+  min-width: 20px;
+  text-align: center;
+}
