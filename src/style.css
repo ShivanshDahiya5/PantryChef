@@ -1011,3 +1011,12 @@ justify-content: center;
   background-color: var(--danger-light);
   border-left: 3px solid var(--danger);
 }
+
+.ingredient-item-checkbox {
+  accent-color: var(--primary);
+}
+
+.ingredient-quantity {
+  font-weight: 600;
+  margin-right: 4px;
+}
