@@ -990,3 +990,13 @@ justify-content: center;
 .modal-ingredients-list {
   list-style: none;
 }
+
+.ingredient-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+  font-size: 14px;
+}
