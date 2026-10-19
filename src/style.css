@@ -978,3 +978,15 @@ justify-content: center;
   min-width: 20px;
   text-align: center;
 }
+
+/* Ingredients Checklist inside Modal */
+.modal-section-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.modal-ingredients-list {
+  list-style: none;
+}
