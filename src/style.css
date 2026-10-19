@@ -1020,3 +1020,7 @@ justify-content: center;
   font-weight: 600;
   margin-right: 4px;
 }
+
+.ingredient-item.owned .ingredient-quantity {
+  color: var(--primary);
+}
