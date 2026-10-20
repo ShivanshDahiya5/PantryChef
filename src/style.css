@@ -1193,3 +1193,9 @@ justify-content: center;
   .hero-section {
     grid-template-columns: 1fr;
   }
+  .hero-image-container {
+    min-height: 200px;
+  }
+  .hero-image-overlay {
+    background: linear-gradient(180deg, rgba(44, 74, 62, 0) 0%, var(--primary) 100%);
+  }
