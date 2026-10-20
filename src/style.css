@@ -1024,3 +1024,12 @@ justify-content: center;
 .ingredient-item.owned .ingredient-quantity {
   color: var(--primary);
 }
+
+/* Interactive Cooking Steps */
+.modal-steps-list {
+  list-style: none;
+}
+
+.step-item {
+  display: flex;
+  gap: 16px;
