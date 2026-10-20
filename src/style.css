@@ -1069,3 +1069,14 @@ justify-content: center;
   text-transform: uppercase;
   margin-bottom: 2px;
 }
+
+.step-text {
+  font-size: 14px;
+  color: var(--text-main);
+  transition: all var(--transition-fast);
+}
+
+.step-item.completed .step-text {
+  text-decoration: line-through;
+  color: var(--text-light);
+}
