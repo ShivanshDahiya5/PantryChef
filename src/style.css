@@ -1138,3 +1138,10 @@ justify-content: center;
   min-height: 100px;
   resize: vertical;
 }
+
+/* Footer info */
+.footer {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 13px;
+  margin-top: 60px;
