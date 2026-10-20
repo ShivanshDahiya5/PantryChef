@@ -1033,3 +1033,15 @@ justify-content: center;
 .step-item {
   display: flex;
   gap: 16px;
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.step-item:hover {
+  background-color: var(--bg-main);
+  border-color: var(--border-color);
+}
