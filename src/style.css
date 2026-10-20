@@ -1145,3 +1145,16 @@ justify-content: center;
   color: var(--text-light);
   font-size: 13px;
   margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Empty State Recipes Grid */
+.recipes-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 24px;
+  background-color: white;
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-color);
+}
