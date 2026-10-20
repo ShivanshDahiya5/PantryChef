@@ -1080,3 +1080,15 @@ justify-content: center;
   text-decoration: line-through;
   color: var(--text-light);
 }
+
+/* Custom Recipe Creator Form */
+.creator-form {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-title {
+  font-family: var(--font-heading);
+  font-size: 26px;
