@@ -1173,3 +1173,14 @@ justify-content: center;
 
 .recipes-empty-desc {
   font-size: 14px;
+@keyframes tagPop {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
