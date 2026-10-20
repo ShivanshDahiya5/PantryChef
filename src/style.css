@@ -1115,3 +1115,15 @@ justify-content: center;
   font-weight: 600;
   color: var(--primary);
 }
+
+.form-input, .form-select, .form-textarea {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-input);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-main);
+  outline: none;
+  transition: all var(--transition-fast);
+}
