@@ -1184,3 +1184,12 @@ justify-content: center;
   .main-grid {
     grid-template-columns: 1fr;
   }
+  .pantry-card {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
