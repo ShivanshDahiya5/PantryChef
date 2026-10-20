@@ -76,7 +76,7 @@ export const store = {
     const trimmed = ingredient.trim();
     if (!trimmed) return;
     const lower = trimmed.toLowerCase();
-    
+
     // Avoid duplicates
     const exists = state.pantryIngredients.some(i => i.toLowerCase() === lower);
     if (!exists) {
@@ -188,7 +188,7 @@ export const store = {
         // 3. Dietary tag filter (All selected dietary tags must be met)
         if (dietary.length > 0) {
           const recipeTags = (recipe.tags || []).map(t => t.toLowerCase());
-          const matchAllDiets = dietary.every(diet => 
+          const matchAllDiets = dietary.every(diet =>
             recipeTags.includes(diet.toLowerCase())
           );
           if (!matchAllDiets) return false;
@@ -198,10 +198,10 @@ export const store = {
         if (pantryIngredients.length > 0) {
           // Calculate matching details
           const requiredIngredients = recipe.ingredients.filter(i => !i.optional);
-          const matchedIngredientsCount = requiredIngredients.filter(i => 
+          const matchedIngredientsCount = requiredIngredients.filter(i =>
             isIngredientMatched(i.name, pantryIngredients)
           ).length;
-          
+
           const totalRequiredCount = requiredIngredients.length;
           const missingCount = totalRequiredCount - matchedIngredientsCount;
 
