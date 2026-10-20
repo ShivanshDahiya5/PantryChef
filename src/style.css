@@ -1056,3 +1056,16 @@ justify-content: center;
   height: 18px;
   cursor: pointer;
 }
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-number {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
