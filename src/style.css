@@ -1158,3 +1158,18 @@ justify-content: center;
   border-radius: var(--radius-lg);
   border: 1px dashed var(--border-color);
 }
+
+.recipes-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.recipes-empty-title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.recipes-empty-desc {
+  font-size: 14px;
