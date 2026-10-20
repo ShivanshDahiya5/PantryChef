@@ -1092,3 +1092,14 @@ justify-content: center;
 .form-title {
   font-family: var(--font-heading);
   font-size: 26px;
+  color: var(--primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+.form-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
