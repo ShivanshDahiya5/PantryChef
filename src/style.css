@@ -1,34 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
 
 :root {
-  --primary: #2C4A3E;       /* Deep Sage Green */
+  --primary: #2C4A3E;
+  /* Deep Sage Green */
   --primary-rgb: 44, 74, 62;
   --primary-hover: #1F362C;
-  --secondary: #D96B43;     /* Warm Terracotta */
+  --secondary: #D96B43;
+  /* Warm Terracotta */
   --secondary-hover: #C55E37;
-  --accent: #E29E3F;        /* Honey Ochre */
+  --accent: #E29E3F;
+  /* Honey Ochre */
   --accent-light: #FEF7EC;
-  --bg-main: #FDFBF7;       /* Warm Cream */
+  --bg-main: #FDFBF7;
+  /* Warm Cream */
   --bg-card: #FFFFFF;
   --bg-input: #F3F4F6;
   --text-main: #1F2937;
   --text-muted: #6B7280;
- --text-light: #9CA3AF;
+  --text-light: #9CA3AF;
   --border-color: #EAE8E4;
   --success: #34D399;
   --success-light: #ECFDF5;
   --success-border: #A7F3D0;
   --danger: #F87171;
   --danger-light: #FEF2F2;
-  
+
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Outfit', system-ui, -apple-system, sans-serif;
-  
+
   --radius-xl: 24px;
   --radius-lg: 16px;
   --radius-md: 12px;
   --radius-sm: 8px;
-  
+
   --shadow-sm: 0 2px 4px rgba(44, 74, 62, 0.03);
   --shadow-md: 0 10px 20px rgba(44, 74, 62, 0.06);
   --shadow-lg: 0 20px 40px rgba(44, 74, 62, 0.12);
@@ -78,11 +82,12 @@ body {
   background: var(--primary);
   color: var(--bg-main);
   width: 44px;
-height: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50% 50% 50% 0; /* Leaf/Flame shape */
+  border-radius: 50% 50% 50% 0;
+  /* Leaf/Flame shape */
   font-size: 20px;
   box-shadow: var(--shadow-sm);
 }
@@ -171,7 +176,7 @@ height: 44px;
   color: var(--primary-hover);
   font-weight: 700;
   font-size: 11px;
-text-transform: uppercase;
+  text-transform: uppercase;
   letter-spacing: 1.5px;
   padding: 6px 12px;
   border-radius: 100px;
@@ -271,7 +276,7 @@ text-transform: uppercase;
 .pantry-input {
   flex: 1;
   padding: 12px 16px;
-border-radius: var(--radius-md);
+  border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
   background-color: var(--bg-input);
   font-family: var(--font-body);
@@ -294,7 +299,7 @@ border-radius: var(--radius-md);
   height: 44px;
   display: flex;
   align-items: center;
-justify-content: center;
+  justify-content: center;
   border-radius: var(--radius-md);
   border: none;
   cursor: pointer;
@@ -331,7 +336,8 @@ justify-content: center;
   text-align: left;
 }
 
-.suggestion-item:hover, .suggestion-item.active {
+.suggestion-item:hover,
+.suggestion-item.active {
   background-color: rgba(44, 74, 62, 0.05);
   color: var(--primary);
 }
@@ -350,7 +356,7 @@ justify-content: center;
   color: var(--primary);
   border: 1px solid rgba(44, 74, 62, 0.1);
   padding: 6px 12px;
- border-radius: 100px;
+  border-radius: 100px;
   font-size: 13px;
   font-weight: 500;
   display: inline-flex;
@@ -683,7 +689,7 @@ justify-content: center;
   backdrop-filter: blur(4px);
   color: white;
   font-size: 12px;
-    padding: 8px 16px;
+  padding: 8px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1116,7 +1122,9 @@ justify-content: center;
   color: var(--primary);
 }
 
-.form-input, .form-select, .form-textarea {
+.form-input,
+.form-select,
+.form-textarea {
   padding: 10px 14px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
@@ -1128,7 +1136,9 @@ justify-content: center;
   transition: all var(--transition-fast);
 }
 
-.form-input:focus, .form-select:focus, .form-textarea:focus {
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
   border-color: var(--primary);
   background-color: white;
   box-shadow: 0 0 0 3px rgba(44, 74, 62, 0.1);
@@ -1173,10 +1183,38 @@ justify-content: center;
 
 .recipes-empty-desc {
   font-size: 14px;
+  color: var(--text-muted);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes tagPop {
-  0% { transform: scale(0.8); opacity: 0; }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* Responsive adjustments */
@@ -1184,6 +1222,7 @@ justify-content: center;
   .main-grid {
     grid-template-columns: 1fr;
   }
+
   .pantry-card {
     position: static;
   }
@@ -1193,9 +1232,21 @@ justify-content: center;
   .hero-section {
     grid-template-columns: 1fr;
   }
+
   .hero-image-container {
     min-height: 200px;
   }
+
   .hero-image-overlay {
     background: linear-gradient(180deg, rgba(44, 74, 62, 0) 0%, var(--primary) 100%);
   }
+
+  .modal-content-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .form-row-grid {
+    grid-template-columns: 1fr;
+  }
+}
